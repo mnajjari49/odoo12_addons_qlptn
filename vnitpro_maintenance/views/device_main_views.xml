@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_vnitpro_device_main_form_2" model="ir.ui.view">
+            <field name="name">view_vnitpro_device_main_form_2</field>
+            <field name="model">vnitpro.device.main</field>
+            <field name="inherit_id" ref="vnitpro_device.view_vnitpro_device_main_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='image']" position="before">
+                    <div class="oe_button_box" name="button_box">
+                        <button name="%(hr_equipment_request_action_from_equipment)d"
+                            type="action"
+                            class="oe_stat_button"
+                            icon="fa-ticket">
+                            <field string="Yêu cầu sửa chữa" name="maintenance_count" widget="statinfo"/>
+                        </button>
+                        <button name="%(hr_equipment_request_action_from_equipment_2)d"
+                            type="action"
+                            class="oe_stat_button"
+                            icon="fa-laptop">
+                            <field string="Bảo dưỡng định kỳ" name="certificate_count" widget="statinfo"/>
+                        </button>
+                        <field name="qr_image" widget="image" width="100" height="100"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="before">
+                    <field name="category_id"></field>
+                </xpath>
+                <xpath expr="//page[@name='des_img']" position="after">
+                    <page name="des_custody" string="Quá trình xử dụng">
+                        <field name="custody_ids">
+                            <tree limit="10" class="tree_no_open">
+                                <field name="employee_use"/>
+                                <field name="department_id"/>
+                                <field name="type"/>
+                                <field name="export_date"/>
+                            </tree>
+                        </field>
+                    </page>
+                 </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sci_view_vnitpro_device_main_tree">
+            <field name="name">vnitpro.device.main.tree.2</field>
+            <field name="model">vnitpro.device.main</field>
+            <field name="inherit_id" ref="vnitpro_device.view_vnitpro_device_main_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='department_id']" position="before">
+                    <field name="category_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

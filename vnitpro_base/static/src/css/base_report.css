@@ -1,0 +1,11 @@
+/* Base Report Css*/
+
+.h3_title_report{
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: bold;
+	color: #007DB2;
+}
+.btn-report{
+	margin-top: 18px;
+}

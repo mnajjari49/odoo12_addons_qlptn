@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <!-- Standard stages for Maintenance Request -->
+    <record id="stage_0" model="vnitpro.maintenance.stage">
+        <field name="name">Đề nghị mới</field>
+        <field name="code">new</field>
+        <field name="sequence" eval="1" />
+        <field name="fold" eval="False" />
+    </record>
+    <record id="stage_1" model="vnitpro.maintenance.stage">
+        <field name="name">Đang thực hiện</field>
+        <field name="code">doing</field>
+        <field name="sequence" eval="2" />
+        <field name="fold" eval="False" />
+    </record>
+    <record id="stage_3" model="vnitpro.maintenance.stage">
+        <field name="name">Hoàn thành</field>
+        <field name="code">done</field>
+        <field name="sequence" eval="3" />
+        <field name="fold" eval="False" />
+    </record>
+    <record id="stage_4" model="vnitpro.maintenance.stage">
+        <field name="name">Hủy</field>
+        <field name="code">cancel</field>
+        <field name="sequence" eval="4" />
+        <field name="fold" eval="True" />
+        <field name="done" eval="True" />
+    </record>
+    <record id="stage_5" model="vnitpro.maintenance.stage">
+        <field name="name">Đóng</field>
+        <field name="code">closed</field>
+        <field name="sequence" eval="5" />
+        <field name="fold" eval="True" />
+        <field name="done" eval="True" />
+    </record>
+</data>
+</odoo>

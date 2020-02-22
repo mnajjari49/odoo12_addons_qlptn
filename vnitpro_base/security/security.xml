@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="module_category_base" model="ir.module.category">
+            <field name="name">Module Accesses</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="group_configure" model="res.groups">
+            <field name="name">Configures</field>
+            <field name="category_id" ref="module_category_base" />
+            <field name="users" eval="[(4, ref('base.user_root'))]" />
+        </record>
+    </data>
+</odoo>

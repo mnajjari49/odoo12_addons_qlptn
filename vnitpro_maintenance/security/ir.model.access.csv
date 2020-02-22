@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_maintenance_system_user,equipment.request system user,model_vnitpro_maintenance_request,base.group_user,1,1,1,1 
+access_maintenance_stage_user,maintenance.stage.user,model_vnitpro_maintenance_stage,base.group_user,1,0,0,0
+access_maintenance_stage_admin_user,equipment.request.stage system user,model_vnitpro_maintenance_stage,group_equipment_manager,1,1,1,1
+access_maintenance_team_user,maintenance.team.user,model_vnitpro_maintenance_team,base.group_user,1,0,0,0
+access_maintenance_team_admin_user,maintenance.team.admin.user,model_vnitpro_maintenance_team,group_equipment_manager,1,1,1,1
+access_mail_activity_type_equipment_manager,mail.activity.type.equipment.manager,mail.model_mail_activity_type,vnitpro_maintenance.group_equipment_manager,1,1,1,1
+access_equipment_category_user,equipment.category.user,model_vnitpro_maintenance_equipment_category,base.group_user,1,0,0,0
+access_equipment_category_admin_user,equipment.category system user,model_vnitpro_maintenance_equipment_category,group_equipment_manager,1,1,1,1
+access_maintenance_profile_user,maintenance.profile.user,model_vnitpro_maintenance_profile,base.group_user,1,0,0,0
+access_maintenance_profile_admin_user,maintenance.profile.admin.user,model_vnitpro_maintenance_profile,group_equipment_manager,1,1,1,1
+
+
+access_ems_equipment_export_admin,ems_equipment_export_admin,model_ems_equipment_export,group_equipment_manager,1,1,1,1
+access_ems_equipment_export_other,ems_equipment_export_other,model_ems_equipment_export,base.group_user,1,0,0,0
+access_ems_equipment_export_detail_admin,ems_equipment_export_detail_admin,model_ems_equipment_export_detail,group_equipment_manager,1,1,1,1
+access_ems_equipment_export_detail_other,ems_equipment_export_detail_other,model_ems_equipment_export_detail,base.group_user,1,0,0,0

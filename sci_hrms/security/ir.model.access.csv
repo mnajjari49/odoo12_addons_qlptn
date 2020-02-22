@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_group_job_mgr,hr.group.job.mgr,model_hr_group_job,,1,1,1,1
+access_hr_recruitment_period_user,hr.recruitment.period.user,model_hr_recruitment_period,hr.group_hr_user,1,0,0,0
+access_hr_recruitment_period_admin,hr.recruitment.period.admin,model_hr_recruitment_period,base.group_system,1,1,1,1
+access_hr_industry_job_mgr,hr.industry.job.mgr,model_hr_industry_job,,1,1,1,1
+access_hr_job_welfare,hr_job_welfare,model_hr_job_welfare,,1,1,1,0

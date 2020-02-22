@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- HR recruitment period tree view -->
+        <record model="ir.ui.view" id="hr_recruitment_period_tree">
+            <field name="name">hr.recruitment.period.tree</field>
+            <field name="model">hr.recruitment.period</field>
+            <field name="arch" type="xml">
+                <tree string="Recruitment history" default_order="end_date desc" create="0" editable="top" decoration-info="employees_num==expected_recruitment">
+                    <field name="job_position" readonly="1"/>
+                    <field name="department" readonly="1"/>
+                    <field name="start_date" readonly="1"/>
+                    <field name="end_date" readonly="1"/>
+                    <field name="expected_recruitment" readonly="1"/>
+                    <field name="applicants_num" readonly="1"/>
+                    <field name="employees_num" readonly="1"/>
+                    <field name="success_rate" readonly="1" widget="progressbar"/>
+<!--                    <field name="to_recruit"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <!-- HR recruitment period form view -->
+        <record model="ir.ui.view" id="hr_recruitment_period_form">
+            <field name="name">hr.recruitment.period.form</field>
+            <field name="model">hr.recruitment.period</field>
+            <field name="arch" type="xml">
+                <form string="Recruitment history" create="0">
+                    <group>
+                        <field name="job_position" readonly="1"/>
+                        <field name="department" readonly="1"/>
+                        <field name="start_date" readonly="1"/>
+                        <field name="end_date" readonly="1"/>
+                        <field name="expected_recruitment" readonly="1"/>
+                        <field name="applicants_num" readonly="1"/>
+                        <field name="employees_num" readonly="1"/>
+                        <field name="success_rate" readonly="1"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_recruitment_period_popup">
+            <field name="name">hr.recruitment.period.popup</field>
+            <field name="model">hr.recruitment.period</field>
+            <field name="arch" type="xml">
+                <form string="Recruitment history" create="0">
+                    <group>
+                        <field name="job_position" invisible="1"/>
+                        <field name="expected_recruitment"/>
+                    </group>
+                    <footer>
+                        <button name="action_save" type="object" string="Start" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- HR recruitment period search view -->
+        <record id="view_hr_recruitment_period_filter" model="ir.ui.view">
+            <field name="name">hr.recruitment.period.search</field>
+            <field name="model">hr.recruitment.period</field>
+            <field name="arch" type="xml">
+                <search string="History">
+                    <field name="job_position"/>
+                    <field name="department"/>
+                    <separator/>
+                    <filter string="Recruiting" name="recruiting" domain="[('end_date', '=', False)]"/>
+                    <filter string="Start in" name="start_date" date="start_date"/>
+                    <filter string="Done in" name="end_date" date="end_date"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_job_position" string="Job" domain="[]" context="{'group_by':'job_position'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by':'department'}"/>
+                    </group>
+                </search>
+             </field>
+         </record>
+
+        <!-- HR recruitment period job action -->
+        <record id="hr_recruitment_period_action" model="ir.actions.act_window">
+            <field name="name">Recruitment history</field>
+            <field name="res_model">hr.recruitment.period</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_hr_recruitment_period_filter"/>
+            <field name="context">{'search_default_recruiting': 1, 'search_default_end_date': 'this_month'}</field>
+        </record>
+
+        <record id="hr_job_recruitment_period_action" model="ir.actions.act_window">
+            <field name="name">Recruitment history</field>
+            <field name="res_model">hr.recruitment.period</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('job_position', '=', active_id)]</field>
+        </record>
+
+
+        <record model="ir.ui.view" id="hr_job_current_emp_tree_view">
+            <field name="name">hr.job.current.emp.tree</field>
+            <field name="model">hr.job</field>
+            <field name="arch" type="xml">
+                <tree string="Job report" create="0">
+                    <field name="group_job"/>
+                    <field name="name"/>
+                    <field name="department_id"/>
+                    <field name="total_payroll"/>
+                    <field name="no_of_employee"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_job_history_emp_tree_view">
+            <field name="name">hr.job.history.emp.tree</field>
+            <field name="model">hr.job</field>
+            <field name="arch" type="xml">
+                <tree string="Job report" create="0">
+                    <field name="group_job"/>
+                    <field name="name"/>
+                    <field name="department_id"/>
+                    <field name="total_payroll"/>
+                    <field name="no_of_employee_at_time"/>
+                    <field name="employees_in"/>
+                    <field name="employees_out"/>
+                    <field name="no_of_employee"/>
+                    <field name="no_of_recruitment2"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sci_hr_job_view_search_inherit" model="ir.ui.view">
+            <field name="name">sci_hr_job_view_search_inherit</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_job_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='department']" position="after">
+                    <filter string="Group" name="group_job" context="{'group_by':'group_job'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sci_hr_job_kanban_inherit" model="ir.ui.view">
+            <field name="name">sci.hr.job.kanban.inherit</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr_recruitment.view_hr_job_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='set_recruit']" position="replace">
+                    <button name="start_recruitment_period" type="object" class="btn btn-secondary" groups="base.group_user">Start Recruitment</button>
+                </xpath>
+                <xpath expr="//a[@name='set_open']" position="replace">
+                    <a role="menuitem" t-if="record.state.raw_value == 'recruit'" name="end_recruitment_period" type="object">Recruitment Done</a>
+                </xpath>
+                <xpath expr="//a[@name='set_recruit']" position="replace">
+                    <a role="menuitem" t-if="record.state.raw_value == 'open'" name="start_recruitment_period" type="object">Start recruitment</a>
+                </xpath>
+            </field>
+        </record>
+
+         <record id="hr_job_survey" model="ir.ui.view">
+            <field name="name">hr.job.form1</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='set_recruit']" position="replace">
+                    <button name="start_recruitment_period" string="Start Recruitment" states="open" type="object" class="oe_highlight" groups="base.group_user"/>
+                </xpath>
+                <xpath expr="//button[@name='set_open']" position="replace">
+                    <button name="end_recruitment_period" string="Stop Recruitment" states="recruit" type="object" groups="base.group_user"/>
+                </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="%(hr_job_recruitment_period_action)d" type="action" string="History" icon="fa-history" groups="base.group_user"/>
+                </xpath>
+                <xpath expr="//group[@name='recruitment']" position="replace">
+                     <group name="recruitment">
+                         <field name="department_id" on_change="1" can_create="true" can_write="true" modifiers="{}"/>
+                         <field name="hr_responsible_id" can_create="true" can_write="true" modifiers="{}" string="Trưởng Bộ Phận"/>
+                         <field name="address_location" modifiers="{}"/>
+                         <field name="group_job" />
+                         <field name="categ_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
+                         <field name="user_id" can_create="true" can_write="true" modifiers="{}" string="Phụ trách tuyển dụng"/>
+<!--				         <field name="no_of_recruitment" on_change="1" modifiers="{}" string="Số lượng tuyển"/>-->
+                         <field name="total_payroll"/>
+                         <field name="point_kpi"/>
+                    </group>
+                    <group name="req">
+                        <field name="type_id" />
+                        <field name="experience" string="Kinh nghiệm"/>
+                        <field name="job_industry" string="Ngành nghề"/>
+                        <label for="experience_from" string="Yêu cầu"  attrs="{'invisible':[('experience','in', ['0','2'])]}"/>
+                        <div class="o_row">
+                            <field name="experience_from" class="oe_inline" attrs="{'invisible':[('experience','in', ['0','2'])]}" string="Từ"/>
+                            <field name="experience_to" class="oe_inline" attrs="{'invisible':[('experience','in',['0','2'])]}" string="Đến"/>
+                            <span>năm</span>
+                        </div>
+                        <field name="salary_type" string="Mức lương"/>
+                        <label for="salary_proposed" string="Đề xuất" attrs="{'invisible':[('salary_type','in', ['ltt','lct'])]}"/>
+                        <div class="o_row">
+                            <field name="salary_proposed" class="oe_inline" attrs="{'invisible':[('salary_type','in', ['ltt','lct'])]}" string="Từ"/>
+                            <field name="salary_proposed_extra"  class="oe_inline" attrs="{'invisible':[('salary_type','in', ['ltt','lct'])]}" string="Đến"/>
+                        </div>
+                        <field name="welfare_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
+                    </group>
+                </xpath>
+                <xpath expr="//group[@name='offer']" position="replace">
+                    <label for="req_job" string="Yêu Cầu Công Việc"/>
+			        <field name="req_job"/>
+                </xpath>
+                <xpath expr="//div[3]" position="replace">
+                    <div>
+                        <label for="description"/>
+                        <field name="description"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_hr_job_tree_inherit_sci" model="ir.ui.view">
+            <field name="name">hr.job.tree</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_tree"/>
+            <field name="arch" type="xml">
+                <field name="website_id" position="replace">
+                    <field name="total_payroll"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="employee_check_list_form_view_job" model="ir.ui.view">
+            <field name="name">employee.checklist.form.1</field>
+            <field name="model">employee.checklist</field>
+            <field name="inherit_id" ref="oh_employee_check_list.employee_check_list_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="group_job_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="employee_check_list_tree_view_job" model="ir.ui.view">
+            <field name="name">employee.checklist.tree.1</field>
+            <field name="model">employee.checklist</field>
+            <field name="inherit_id" ref="oh_employee_check_list.employee_check_list_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="group_job_ids" widget="many2many_tags"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- Group job Tree View -->
+        <record model="ir.ui.view" id="hr_group_job_tree">
+            <field name="name">hr.group.job.tree</field>
+            <field name="model">hr.group.job</field>
+            <field name="arch" type="xml">
+                <tree string="Group">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Group job Form View -->
+        <record model="ir.ui.view" id="hr_group_job_form">
+            <field name="name">hr.group.job.form</field>
+            <field name="model">hr.group.job</field>
+            <field name="arch" type="xml">
+                <form string="Group">
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Group job Action -->
+        <record id="hr_group_job_action" model="ir.actions.act_window">
+            <field name="name">Bộ phận</field>
+            <field name="res_model">hr.group.job</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="hr_group_job_tree"/>
+        </record>
+
+
+        <!-- Ngành nghề Tree View -->
+        <record model="ir.ui.view" id="hr_industry_job_tree">
+            <field name="name">hr_industry_job_tree</field>
+            <field name="model">hr.industry.job</field>
+            <field name="arch" type="xml">
+                <tree string="Group">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Ngành nghề Form View -->
+        <record model="ir.ui.view" id="hr_industry_job_form">
+            <field name="name">hr_industry_job_form</field>
+            <field name="model">hr.industry.job</field>
+            <field name="arch" type="xml">
+                <form string="Group">
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Ngành nghề Action -->
+        <record id="hr_industry_job_action" model="ir.actions.act_window">
+            <field name="name">Ngành nghề</field>
+            <field name="res_model">hr.industry.job</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="hr_industry_job_tree"/>
+        </record>
+
+        <menuitem
+                id="menu_hr_group_job"
+                name="Bộ phận"
+                parent="hr_recruitment.menu_hr_recruitment_configuration"
+                action="hr_group_job_action"
+                sequence="5"/>
+
+        <menuitem
+                id="menu_hr_industry_job"
+                name="Ngành nghề"
+                parent="hr_recruitment.menu_hr_recruitment_configuration"
+                action="hr_industry_job_action"
+                sequence="6"/>
+
+        <menuitem name="Recruitment history" id="report_hr_recruitment_period" parent="hr_recruitment.report_hr_recruitment"
+                  action="hr_recruitment_period_action" sequence="25" groups="hr_recruitment.group_hr_recruitment_manager"/>
+
+    </data>
+</odoo>

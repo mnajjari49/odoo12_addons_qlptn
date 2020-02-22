@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_vnitpro_device_management" name="Quản lý thiết bị" sequence="1"
+                  web_icon="vnitpro_device,static/description/icon.png"/>
+
+        <menuitem id="menu_vnitpro_device_dashboard" name="Dashboard" sequence="10"
+                  parent="menu_vnitpro_device_management" action="act_open_vnitpro_device_dashboard_view"/>
+
+        <menuitem id="menu_vnitpro_device_main" name="Thiết bị chính" sequence="20" parent="menu_vnitpro_device_management"
+                  action="act_vnitpro_device_main_view"/>
+        <menuitem id="menu_vnitpro_extra_device" name="Thiết bị phụ" sequence="30"
+                  parent="menu_vnitpro_device_management"
+                  action="act_vnitpro_device_extra_view"/>
+        <menuitem id="menu_vnitpro_device_extra" name="Linh kiện/Vật tư" sequence="40"
+                  parent="menu_vnitpro_device_management"
+                  action="act_vnitpro_device_parts_in_view"/>
+    </data>
+</odoo>

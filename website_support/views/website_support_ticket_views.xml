@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_backend" name="helpdesk assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/website_support/static/src/css/kanban.css"/>
+        </xpath>
+    </template>
+
+    <record id="website_support_ticket_view_form" model="ir.ui.view">
+        <field name="name">website.support.ticket form view</field>
+        <field name="model">website.support.ticket</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state_id" widget="statusbar" clickable="False" options="{'fold_field': 'fold'}"/>
+                </header>
+                <header>
+                    <button type="object" name="open_close_ticket_wizard" string="Close Ticket" attrs="{'invisible' :[('close_time', '!=', False )]}"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="subject" class="oe_edit_only"/>
+                        <h1><field name="subject"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="ticket_number" />
+                            <field name="channel"/>
+                            <field name="priority_id" widget="priority"/>
+                            <field name="tag_ids" widget="many2many_tags"/>
+                            <field name="category_id"/>
+<!--                            <field name="support_comment" readonly="1"/>-->
+                            <field name="team_id"/>
+                            <field name="user_id" domain="[('share','=',False)]"/>
+                        </group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="person_name"/>
+                            <field name="department"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                            <field name="support_rating" readonly="1"/>
+                            <field name="close_time" readonly="1"/>
+                            <field name="closed_by_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Mô tả" name="description">
+                            <field name="description" widget="html"/>
+                        </page>
+                        <page string="Tệp đính kèm">
+                            <field name="attachment_ids">
+                                <tree editable="bottom" nolabel="1" limit="6">
+                                    <field name="file" filename="file_name" string="Chọn tệp tin"/>
+                                    <field name="file_name" force_save="1" string="Tên tệp tin"/>
+                                    <field name="user_id" force_save="1" string="Người tải"/>
+                                    <field name="description" string="Mô tả"/>
+                                    <field name="date" string="Ngày đính kèm tệp"/>
+                                    <button name="download_file" type="object" class="button_blank fa fa-download" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_view_kanban" model="ir.ui.view">
+        <field name="name">website.support.ticket kanban view</field>
+        <field name="model">website.support.ticket</field>
+        <field name="arch" type="xml">
+            <kanban class="o_res_partner_kanban" default_group_by="state_id" create="false">
+                <field name="subject"/>
+                <field name="priority_id" widget="priority"/>
+                <field name="state_id"/>
+                <field name="category_id"/>
+                <field name="description"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_res_partner_kanban">
+                            <div class="o_kanban_tags_section oe_kanban_partner_categories"/>
+                            <div class="oe_kanban_details">
+                                <strong class="oe_partner_heading"><field name="subject"/></strong>
+                                <ul>
+                                    <li t-if="record.priority_id.raw_value"><field name="priority_id"/></li>
+                                    <li t-if="record.state_id.raw_value"><field name="state_id"/></li>
+                                    <li t-if="record.category_id.raw_value"><field name="category_id"/></li>
+                                    <li t-if="record.description.raw_value"><t t-raw="record.description.raw_value"/></li>
+                                </ul>
+                                <div class="oe_kanban_partner_links"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_view_search" model="ir.ui.view">
+        <field name="name">website.support.ticket search view</field>
+        <field name="model">website.support.ticket</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="ticket_number"/>
+                <field name="subject"/>
+                <field name="tag_ids"/>
+                <field name="user_id" string="Người phụ trách"/>
+<!--                <filter string="Unattended Tickets" name="unattended_tickets" domain="[('unattended', '=', True )]" />-->
+                <filter name="group_by_category" string="Bộ phận tiếp nhận" domain="[]"  context="{'group_by':'category_id'}"/>
+                <filter name="group_by_user" string="Người phụ trách" domain="[]"  context="{'group_by':'user_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_view_graph" model="ir.ui.view">
+        <field name="name">website.support.ticket graph view</field>
+        <field name="model">website.support.ticket</field>
+        <field name="arch" type="xml">
+            <graph stacked="False">
+                <field name="create_date" interval="day" string="Create Date"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_view_tree" model="ir.ui.view">
+        <field name="name">website.support.ticket tree view</field>
+        <field name="model">website.support.ticket</field>
+        <field name="arch" type="xml">
+            <tree colors="black:ticket_color==False">
+                <field name="create_user_id" invisible="True"/>
+                <field name="create_date" string ="Ngày tạo"/>
+                <field name="ticket_number"/>
+                <field name="priority_id" widget="priority"/>
+                <field name="user_id" string="Người phụ trách"/>
+                <field name="person_name"/>
+                <field name="category_id"/>
+                <field name="state_id"/>
+                <field name="subject"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_action_partner" model="ir.actions.act_window">
+        <field name="name">Danh sách Tickets</field>
+        <field name="res_model">website.support.ticket</field>
+        <field name="view_mode">tree,kanban,form,graph</field>
+        <field name="help" type="html">
+            <p>
+                Không tìm thấy Tickets hỗ trợ
+            </p>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_action" model="ir.actions.act_window">
+        <field name="name">Danh sách Tickets</field>
+        <field name="res_model">website.support.ticket</field>
+        <field name="view_mode">tree,kanban,form,graph</field>
+        <field name="context">{"search_default_unattended_tickets":1, 'auto_refresh': 1, 'default_create_user_id': uid}</field>
+        <field name="help" type="html">
+            <p>
+                Không tìm thấy Tickets hỗ trợ
+            </p>
+        </field>
+    </record>
+
+</odoo>

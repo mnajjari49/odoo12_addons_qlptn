@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="hr_equipment_detail_view_search" model="ir.ui.view">
+            <field name="name">ems.equipment.export.detail.search</field>
+            <field name="model">ems.equipment.export.detail</field>
+            <field name="priority">32</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="equipment_id" string="Thiết bị"/>
+                    <field name="department_id" string="Phòng ban"/>
+                    <field name="employee_use" string="Chủ sở hữu"/>
+                    <field name="type" string="Loại phiếu"/>
+                    <separator/>
+                    <group expand="1" string="Group By">
+                       <filter name="group_equipment_id" string='Thiết bị' context="{'group_by':'equipment_id'}"/>
+                       <filter name="department_id" string="Phòng ban" context="{'group_by':'department_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="hr_equipment_tree_view" model="ir.ui.view">
+            <field name="name">hr.equipment.tree</field>
+            <field name="model">ems.equipment.export.detail</field>
+            <field name="arch" type="xml">
+                <tree create="0" edit="0" delete="0" editable="top">
+                    <field name="equipment_id"/>
+                    <field name="department_id"/>
+                    <field name="employee_use"/>
+                    <field name="type"/>
+                    <field name="export_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_ems_equipment_export_tree" model="ir.ui.view">
+            <field name="name">ems.equipment.export.tree</field>
+            <field name="model">ems.equipment.export</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Equipment Exports">
+                    <field name="code"/>
+                    <field name="employee_id"/>
+                    <field name="employee_use"/>
+                    <field name="export_date"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_ems_equipment_export_form" model="ir.ui.view">
+            <field name="name">ems.equipment.export.form</field>
+            <field name="model">ems.equipment.export</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Equipment Exports">
+                    <header>
+                        <button string="Xác nhận" type="object" name="approve"
+                                class="oe_highlight"
+                                attrs="{'invisible': [('state','!=','draft')]}"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" />
+                                <field name="category_id"/>
+                                <field name="employee_id"/>
+                                <field name="export_date"/>
+                            </group>
+                            <group>
+                                <field name="type"/>
+                                <field name="department_id"/>
+                                <field name="parent_id"/>
+                                <field name="employee_use"/>
+                                <field name="checklist_domain" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="device_extra" string="Danh sách thiết bị">
+                                <field name="equipment_ids" colspan="2" string="Danh sách thiết bị">
+                                    <tree editable="top">
+                                        <field name="equipment_id" domain="[('id', 'in', parent.checklist_domain)]"/>
+                                        <field name="uom_id" string="Đơn vị"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="device_extra" string="Tệp đính kèm">
+                                <field name="attachment_ids" string="Tệp đính kèm" colspan="2">
+                                    <tree editable="bottom" nolabel="1" limit="6">
+                                        <field name="file" filename="file_name" string="Chọn tệp tin"/>
+                                        <field name="file_name" force_save="1" string="Tên tệp tin"/>
+                                        <field name="user_id" force_save="1" string="Người tải"/>
+                                        <field name="date" string="Ngày đính kèm tệp"/>
+                                        <button name="download_file" type="object" class="button_blank fa fa-download" />
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="device_extra" string="Mô tả">
+                                <field name="description" string="Mô tả"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_ems_equipment_export_search" model="ir.ui.view">
+            <field name="name">ems.equipment.export.search</field>
+            <field name="model">ems.equipment.export</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Equipment Export">
+                    <field name="code"/>
+                    <field name="employee_id"/>
+                    <field name="employee_use"/>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="act_open_ems_equipment_export_view">
+            <field name="name">Bàn giao thiết bị</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ems.equipment.export</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_ems_equipment_export_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_open_ems_equipment_export_form_view">
+            <field name="act_window_id" ref="act_open_ems_equipment_export_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_ems_equipment_export_form"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_open_ems_equipment_export_tree_view">
+            <field name="act_window_id" ref="act_open_ems_equipment_export_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_ems_equipment_export_tree"/>
+        </record>
+
+        <menuitem id="menu_ems_export_sub" name="Bàn giao thiết bị" sequence="45"
+                  action="act_open_ems_equipment_export_view"
+                  parent="vnitpro_device.menu_vnitpro_device_management"/>
+    </data>
+</odoo>

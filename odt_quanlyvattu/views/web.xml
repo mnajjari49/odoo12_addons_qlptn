@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem
+            id="menu_all_menu"
+            name="All menu"
+            parent="base.menu_administration"
+            sequence="100"
+            groups="base.group_erp_manager"
+    />
+    <menuitem id="stock.menu_stock_root" name="Stock" sequence="4" groups="base.group_erp_manager"
+              parent="menu_all_menu"/>
+</odoo>

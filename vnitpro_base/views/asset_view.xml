@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Create by tam.pt-->
+<odoo>
+    <data>
+        <template id="assets_backend_ose" name="web_fms assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link href="/vnitpro_base/static/src/css/base.css" type="text/css" rel="stylesheet" />
+                <link href="/vnitpro_base/static/src/css/base_report.css" type="text/css" rel="stylesheet" />
+            </xpath>
+        </template>
+        <template id="assets_backend" name="vnitpro_base assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/vnitpro_base/static/src/js/assets.js"></script>
+            </xpath>
+        </template>
+        <template id="assets_backend" name="vnitpro_base assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/vnitpro_base/static/src/js/assets.js"></script>
+            </xpath>
+        </template>        
+        <template id="title_js" name="change_title" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/vnitpro_base/static/src/js/title.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

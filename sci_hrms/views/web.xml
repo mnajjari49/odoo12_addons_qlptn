@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem
+            id="menu_all_menu"
+            name="All menu"
+            parent="base.menu_administration"
+            sequence="100"
+            groups="base.group_erp_manager"
+    />
+    <menuitem id="mail.menu_root_discuss" name="Discuss" sequence="2" groups="base.group_erp_manager"
+              parent="menu_all_menu"/>
+    <menuitem id="base.menu_board_root" name="Board" sequence="2" groups="base.group_erp_manager"
+              parent="menu_all_menu"/>
+    <menuitem id="calendar.mail_menu_calendar" name="Calendar" sequence="2" groups="base.group_erp_manager"
+              parent="menu_all_menu"/>
+    <menuitem id="website.menu_website_configuration" name="website" sequence="3" groups="base.group_erp_manager"
+              parent="menu_all_menu"/>
+    <menuitem id="hr_expense.menu_hr_expense_root" name="Chi phí" sequence="5" groups="base.group_erp_manager"
+              parent="menu_all_menu"/>
+    <menuitem id="utm.menu_link_tracker_root" name="utm" sequence="4" groups="base.group_erp_manager"
+              parent="menu_all_menu"/>
+    <menuitem id="event.event_main_menu" name="Event" sequence="4" groups="base.group_erp_manager"
+              parent="menu_all_menu"/>
+    <menuitem id="account.menu_finance" name="Invoice" sequence="4" groups="base.group_erp_manager"
+              parent="menu_all_menu"/>
+    <menuitem id="hr_timesheet.timesheet_menu_root" name="Thời gian biểu" sequence="4" groups="base.group_erp_manager"
+              parent="menu_all_menu"/>
+</odoo>

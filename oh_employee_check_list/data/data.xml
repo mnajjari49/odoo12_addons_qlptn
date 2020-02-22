@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="entry_document1" model="employee.checklist">
+        <field name="name">Sơ yếu lý lịch</field>
+        <field name="document_type">entry</field>
+    </record>
+    <record id="entry_document2" model="employee.checklist">
+        <field name="name">Bản sao CMND</field>
+        <field name="document_type">entry</field>
+    </record>
+    <record id="entry_document3" model="employee.checklist">
+        <field name="name">Giấy khai sinh</field>
+        <field name="document_type">entry</field>
+    </record>
+    <record id="exit_document1" model="employee.checklist">
+        <field name="name">Bản sao sổ hộ khẩu</field>
+        <field name="document_type">entry</field>
+    </record>
+    <record id="exit_document2" model="employee.checklist">
+        <field name="name">Giấy khám sức khỏe</field>
+        <field name="document_type">entry</field>
+    </record>
+    <record id="exit_document2" model="employee.checklist">
+        <field name="name">Bản sao công chứng bằng cấp, chứng chỉ liên quan</field>
+        <field name="document_type">entry</field>
+    </record>
+    <record id="exit_document2" model="employee.checklist">
+        <field name="name">02 ảnh 3*4</field>
+        <field name="document_type">entry</field>
+    </record>
+    <record id="exit_document2" model="employee.checklist">
+        <field name="name">Đồng phục nhân viên</field>
+        <field name="document_type">exit</field>
+    </record>
+    <record id="exit_document2" model="employee.checklist">
+        <field name="name">Thẻ nhân viên</field>
+        <field name="document_type">exit</field>
+    </record>
+    <record id="exit_document2" model="employee.checklist">
+        <field name="name">Sổ tay nhân viên</field>
+        <field name="document_type">exit</field>
+    </record>
+</odoo>

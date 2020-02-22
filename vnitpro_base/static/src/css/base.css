@@ -1,0 +1,57 @@
+.button_blank{
+    background-color: #fff0 !important;
+    border: none;
+}
+.div_content{
+    font-weight: bold;
+    font-size: 16px;
+    color: #337ab7;
+    margin: 5px 10px 5px 0px;
+}
+.div_center{
+    font-weight: bold;
+    font-size: 22px;
+    color: #337ab7;
+    text-align: center;
+    margin: 15px 0px 15px 0px;
+}
+.center{
+    text-align: center;
+}
+.button {
+    margin: 5px;
+    text-align: center;  
+}
+.div_attachfile {
+    font-weight: bold;
+    font-size: 18px ;
+    color: #337ab7;
+}
+.div_process {
+    margin: 2px 5px 2px 5px;
+}
+.red_color {
+    color: red;
+}
+.red_color_bold {
+    color: red;
+    font-weight: bold;
+}
+.blue_color {
+    color: blue;
+}
+.yellow_color {
+    color: yellow;
+}
+.title_kanban {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #007DB2 !important;
+}
+.text_size11{
+    font-size: 11px;
+}
+.btn-kanban-info {
+    border-radius: 20px;
+    font-size: 11px;
+}

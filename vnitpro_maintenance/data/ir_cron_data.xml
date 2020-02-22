@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_data_device_update_maintenance" model="ir.cron">
+            <field name="name">Device: update maintenance</field>
+            <field name="model_id" ref="model_vnitpro_device_main"/>
+            <field name="type">ir.actions.server</field>
+            <field name="state">code</field>
+            <field name="code">model.update_maintenance()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+        </record>
+    </data>
+</odoo>

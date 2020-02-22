@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_employee_form_inherited" model="ir.ui.view">
+            <field name="name">hr.employee.form.inherited</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='toggle_active']" position="after">
+                    <button string="Request account" type="object" name="account_request"
+                            icon ="fa-forward" groups="hr.group_hr_user"
+                            class="oe_stat_button" attrs="{'invisible': [('user_id', '!=', False)]}"/>
+                    <button string="Create account" type="object" name="sci_create" groups="base.group_erp_manager"
+                            class="oe_stat_button" icon="fa-user"
+                            attrs="{'invisible': [('user_id', '!=', False)]}"/>
+                    <button string="Edit user" type="object" name="sci_create" groups="base.group_erp_manager"
+                            class="oe_stat_button" icon="fa-edit"
+                            attrs="{'invisible': [('user_id', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='work_phone']" position="after">
+                    <field name="employee_id" required="1"/>
+                    <field name="contract_type" readonly="1"/>
+                    <field name="contract_date" readonly="1"/>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="after">
+                    <field name="group_job"/>
+                </xpath>
+                <xpath expr="//field[@name='joining_date']" position="after">
+                    <field name="work_duration" string="Thâm niên"/>
+                    <field name="child_ids" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='tz']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='address_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                 <xpath expr="//field[@name='work_email']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sci_hr_employee_view_search_inherit" model="ir.ui.view">
+            <field name="name">sci_hr_employee_view_search_inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='activities_upcoming_all']" position="after">
+                    <filter name="entry_progress" string="Checklist not fulfill" domain="[('entry_progress', '&lt;', 100)]" groups="hr.group_hr_user"/>
+                </xpath>
+                <xpath expr="//filter[@name='group_job']" position="after">
+                    <filter name="group_hr_user_id" string="Responsible" context="{'group_by':'hr_user_id'}" groups="hr.group_hr_user"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sci_hr_employee_work_duration_tree_view">
+            <field name="name">hr.employee.tree.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="employee_id"/>
+                </xpath>
+                <xpath expr="//field[@name='work_phone']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='work_email']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="after">
+                    <field name="gender"/>
+                    <field name="birthday"/>
+                </xpath>
+                <xpath expr="//field[@name='job_id']" position="after">
+                    <field name="joining_date"/>
+                    <field name="resign_date"/>
+                </xpath>
+                <xpath expr="//field[@name='message_needaction']" position="after">
+                    <field name="work_duration"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_employee_entry_checklist_tree" model="ir.ui.view">
+            <field name="name">hr.employee.entry.checklist.tree</field>
+            <field name="model">hr.employee</field>
+            <field name="priority" eval="66"/>
+            <field name="arch" type="xml">
+                <tree string="Employees" create="0">
+                    <field name="name"/>
+                    <field name="work_phone"/>
+                    <field name="work_email"/>
+                    <field name="department_id"/>
+                    <field name="group_job"/>
+                    <field name="job_id"/>
+                    <field name="parent_id"/>
+                    <field name="entry_progress" widget="progressbar"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sci_hr_report_employee_checklist" model="ir.actions.act_window">
+            <field name="name">Employees</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_employee_entry_checklist_tree"/>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+            <field name="context">{'search_default_entry_progress': 1, 'search_default_group_hr_user_id': 1}</field>
+        </record>
+
+        <record id="sci_hr_contract_view_search_inherit" model="ir.ui.view">
+            <field name="name">sci_hr_contract_view_search_inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='to_renew']" position="before">
+                    <filter name="date_end" string="End in" date="date_end"/>
+                    <separator/>
+                    <filter name="open" string="Running" domain="[('state', '=', 'open')]"/>
+                </xpath>
+                <xpath expr="//filter[@name='employee']" position="after">
+                    <filter string="Department" name="group_department" domain="[]" context="{'group_by':'department_id'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_contract_trial_action" model="ir.actions.act_window">
+            <field name="name">Trial contract</field>
+            <field name="res_model">hr.contract</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain" eval="[('type_id', 'in', [ref('sci_hrms.hr_contract_type_trainee'), ref('sci_hrms.hr_contract_type_probation')])]"/>
+            <field name="context">{'search_default_open': 1, 'search_default_group_department': 1}</field>
+        </record>
+
+        <menuitem name="Entry checklist" id="report_hr_employee_checklist" parent="hr_recruitment.report_hr_recruitment"
+          action="sci_hr_report_employee_checklist" sequence="15" />
+
+        <menuitem name="Trial contract" id="report_hr_employee_trial" parent="hr_recruitment.report_hr_recruitment"
+          action="hr_contract_trial_action" sequence="35" />
+
+    </data>
+</odoo>

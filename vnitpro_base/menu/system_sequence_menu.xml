@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+<!--        <record model="ir.ui.menu" id="mail.mail_channel_menu_root_chat">-->
+<!--            <field name="sequence">99</field>-->
+<!--        </record>-->
+        <record model="ir.ui.menu" id="base.menu_board_root">
+            <field name="sequence">0</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,464 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* vnitpro_device
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-15 09:07+0000\n"
+"PO-Revision-Date: 2018-10-15 09:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.view_device_main_kanban
+msgid "<span>Extra Device(s)</span>"
+msgstr "<span>Thiết bị phụ tùng</span>"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_dashboard_kanban
+msgid "<span>Main Device(s)</span>"
+msgstr "<span>Thiết bị chính</span>"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.device_extra_kanban_view
+msgid "<span>Parts In Device(s)</span>"
+msgstr "<span>Linh kiện/Phụ kiện</span>"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.device_extra_kanban_view
+#: model:ir.ui.view,arch_db:vnitpro_device.device_parts_in_kanban_view
+msgid "<strong>Amount:</strong>"
+msgstr "<strong>Số lượng:</strong>"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.device_extra_kanban_view
+#: model:ir.ui.view,arch_db:vnitpro_device.device_parts_in_kanban_view
+#: model:ir.ui.view,arch_db:vnitpro_device.view_device_main_kanban
+msgid "<strong>Code:</strong>"
+msgstr "<strong>Mã:</strong>"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_extra_form
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_main_form
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_parts_in_form
+msgid "<strong>Description:</strong>"
+msgstr "<strong>Mô tả:</strong>"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.device_parts_in_kanban_view
+msgid "<strong>In Extra Device:</strong>"
+msgstr "<strong>Trong thiết bị phụ tùng:</strong>"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.device_parts_in_kanban_view
+msgid "<strong>In Main Device:</strong>"
+msgstr "<strong>Trong thiết bị chính:</strong>"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.view_device_main_kanban
+msgid "<strong>In:</strong>"
+msgstr "<strong>Thuộc:</strong>"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.device_extra_kanban_view
+#: model:ir.ui.view,arch_db:vnitpro_device.device_parts_in_kanban_view
+#: model:ir.ui.view,arch_db:vnitpro_device.view_device_main_kanban
+msgid "<strong>Specifications:</strong>"
+msgstr "<strong>Thông số kĩ thuật: </strong>"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_extra_search
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_main_search
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_parts_in_search
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_amount
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_amount
+msgid "Amount"
+msgstr "Số lượng"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_extra_form
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_main_form
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_parts_in_form
+msgid "Code"
+msgstr "Mã"
+
+#. module: vnitpro_device
+#: model:ir.ui.menu,name:vnitpro_device.menu_vnitpro_device_configure
+msgid "Configure"
+msgstr "Danh mục"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_department_count_main_device
+msgid "Count Main Device"
+msgstr "Tính số thiết bị chính"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_create_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_create_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image_create_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image_create_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_create_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image_create_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_create_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image_create_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_unit_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_create_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_create_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image_create_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image_create_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_create_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image_create_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_create_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image_create_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_unit_create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: vnitpro_device
+#: model:ir.actions.act_window,name:vnitpro_device.act_open_vnitpro_device_dashboard_view
+#: model:ir.ui.menu,name:vnitpro_device.menu_vnitpro_device_dashboard
+msgid "Dashboard"
+msgstr "Bảng thông tin"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_date_import
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_date_import
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_date_import
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_date_import
+msgid "Date Import"
+msgstr "Ngày nhập"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_department_id
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_description
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_description
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image_description
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image_description
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_description
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image_description
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_description
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image_description
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_extra_form
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_main_form
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_parts_in_form
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_description_images_ids
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_description_images_ids
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_description_images_ids
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_extra_form
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_main_form
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_parts_in_form
+msgid "Description Images"
+msgstr "Hình ảnh mô tả"
+
+#. module: vnitpro_device
+#: model:ir.model,name:vnitpro_device.model_vnitpro_device
+#: model:website.menu,name:vnitpro_device.menu_device
+msgid "Device"
+msgstr "Thiết bị"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_main_form
+msgid "Device Extra"
+msgstr "Thiết bị phụ tùng"
+
+#. module: vnitpro_device
+#: model:ir.model,name:vnitpro_device.model_vnitpro_device_image
+msgid "Device Image"
+msgstr "Ảnh thiết bị"
+
+#. module: vnitpro_device
+#: model:ir.module.category,name:vnitpro_device.group_device_category
+#: model:ir.ui.menu,name:vnitpro_device.menu_vnitpro_device_management
+msgid "Device Management"
+msgstr "Quản lý thiết bị"
+
+#. module: vnitpro_device
+#: model:ir.actions.act_window,name:vnitpro_device.act_vnitpro_device_parts_in_view
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_parts_in_device_ids
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_extra_form
+msgid "Device Parts In"
+msgstr "Linh kiện/Phụ kiện"
+
+#. module: vnitpro_device
+#: model:ir.model,name:vnitpro_device.model_vnitpro_device_extra
+msgid "Device Type"
+msgstr "Loại thiết bị"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_display_name
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_display_name
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image_display_name
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image_display_name
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_display_name
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image_display_name
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_display_name
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image_display_name
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_unit_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: vnitpro_device
+#: model:res.groups,name:vnitpro_device.employee_group
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: vnitpro_device
+#: model:ir.actions.act_window,name:vnitpro_device.act_vnitpro_device_extra_view
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image_extra_device_id
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_extra_device_ids
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_extra_device_id
+#: model:ir.ui.menu,name:vnitpro_device.menu_vnitpro_extra_device
+msgid "Extra Device"
+msgstr "Thiết bị phụ tùng"
+
+#. module: vnitpro_device
+#: model:ir.model,name:vnitpro_device.model_vnitpro_device_extra_image
+msgid "Extra Device Image"
+msgstr "Ảnh thiết bị phụ tùng"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_parts_in_form
+msgid "Parts In Device Images"
+msgstr "Ảnh linh kiện/phụ kiện"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_extra_form
+msgid "Extra Device Images"
+msgstr "Ảnh thiết bị phụ tùng"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_id
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image_id
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_id
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image_id
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_id
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image_id
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_id
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image_id
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_unit_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image_image
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image_image
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image_image
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image_image
+msgid "Image"
+msgstr "Hình ảnh"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_extra_search
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_main_search
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_parts_in_search
+msgid "Inactive"
+msgstr "Không hiệu lực"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device___last_update
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra___last_update
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image___last_update
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image___last_update
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main___last_update
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image___last_update
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in___last_update
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image___last_update
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_unit___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image_write_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_write_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image_write_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image_write_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_write_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image_write_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_write_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_write_uid
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_unit_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image_write_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_write_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image_write_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image_write_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_write_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image_write_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_write_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_write_date
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_unit_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_location
+msgid "Location"
+msgstr "Vị trí"
+
+#. module: vnitpro_device
+#: model:ir.actions.act_window,name:vnitpro_device.act_vnitpro_device_main_view
+#: model:ir.model,name:vnitpro_device.model_vnitpro_device_main
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_main_device_id
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image_main_device_id
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_main_device_id
+#: model:ir.ui.menu,name:vnitpro_device.menu_vnitpro_device_main
+msgid "Main Device"
+msgstr "Thiết bị chính"
+
+#. module: vnitpro_device
+#: model:ir.model,name:vnitpro_device.model_vnitpro_device_main_image
+msgid "Main Device Image"
+msgstr "Ảnh thiết bị chính"
+
+#. module: vnitpro_device
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_main_form
+msgid "Main Device Images"
+msgstr "Ảnh thiết bị chính"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_department_main_device_ids
+msgid "Main Device List"
+msgstr "Danh sách thiết bị chính"
+
+#. module: vnitpro_device
+#: model:res.groups,name:vnitpro_device.manager_group
+msgid "Manager"
+msgstr "Người quản lý"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image_medium
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image_medium
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image_medium
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image_medium
+msgid "Medium-sized image"
+msgstr "Hình ảnh với kích thước vừa phải"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,help:vnitpro_device.field_vnitpro_device_extra_image_medium
+#: model:ir.model.fields,help:vnitpro_device.field_vnitpro_device_image_medium
+#: model:ir.model.fields,help:vnitpro_device.field_vnitpro_device_main_image_medium
+#: model:ir.model.fields,help:vnitpro_device.field_vnitpro_device_parts_in_image_medium
+msgid "Medium-sized image of this model. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Medium-sized image of this model. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image_name
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image_name
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image_name
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image_name
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_extra_form
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_main_form
+#: model:ir.ui.view,arch_db:vnitpro_device.view_vnitpro_device_parts_in_form
+msgid "Name"
+msgstr "Tên"
+
+#. module: vnitpro_device
+#: model:ir.model,name:vnitpro_device.model_vnitpro_device_parts_in
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image_parts_in_device_id
+#: model:ir.ui.menu,name:vnitpro_device.menu_vnitpro_device_extra
+msgid "Parts In Device"
+msgstr "Linh kiện/Phụ kiện"
+
+#. module: vnitpro_device
+#: model:ir.model,name:vnitpro_device.model_vnitpro_device_parts_in_image
+msgid "Parts In Device Image"
+msgstr "Ảnh linh kiện/phụ kiện"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_count_extra_device
+msgid "Quantity Of Extra Devices"
+msgstr "Số lượng thiết bị phụ tùng"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_count_parts_in_device
+msgid "Quantity Parts In Devices"
+msgstr "Số lượng linh kiện/phụ kiện"
+
+#. module: vnitpro_device
+#: code:addons/vnitpro_device/models/device/device_extra.py:30
+#: code:addons/vnitpro_device/models/device/device_parts_in.py:37
+#, python-format
+msgid "Quantity must be greater than 0"
+msgstr "Số lượng phải lớn hơn 0"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_unit_sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,help:vnitpro_device.field_vnitpro_device_extra_image_small
+#: model:ir.model.fields,help:vnitpro_device.field_vnitpro_device_image_small
+#: model:ir.model.fields,help:vnitpro_device.field_vnitpro_device_main_image_small
+#: model:ir.model.fields,help:vnitpro_device.field_vnitpro_device_parts_in_image_small
+msgid "Small sized image of this model. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Small sized image of this model. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_image_small
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_image_small
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_image_small
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_image_small
+msgid "Small-sized image"
+msgstr "Ảnh cỡ nhỏ"
+
+#. module: vnitpro_device
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_specifications
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_main_specifications
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_specifications
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_specifications
+msgid "Specifications"
+msgstr "Thông số kĩ thuật"
+
+#. module: vnitpro_device
+#: model:ir.actions.act_window,name:vnitpro_device.act_open_vnitpro_base_unit_view
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_extra_unit_id
+#: model:ir.model.fields,field_description:vnitpro_device.field_vnitpro_device_parts_in_unit_id
+#: model:ir.ui.menu,name:vnitpro_device.menu_vnitpro_unit
+msgid "Unit"
+msgstr "Đơn vị"
+
+#. module: vnitpro_device
+#: model:ir.actions.act_url,name:vnitpro_device.action_open_website
+msgid "Website Device"
+msgstr "Web thiết bị"
+
+#. module: vnitpro_device
+#: model:ir.model,name:vnitpro_device.model_vnitpro_department
+msgid "vnitpro.department"
+msgstr "vnitpro.department"
+
+#. module: vnitpro_device
+#: model:ir.model,name:vnitpro_device.model_vnitpro_unit
+msgid "vnitpro.unit"
+msgstr "vnitpro.unit"
+

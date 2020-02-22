@@ -1,0 +1,1551 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sci_hrms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20190424\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-08 07:01+0000\n"
+"PO-Revision-Date: 2020-01-08 07:01+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "- Có kinh nghiệm ở vị trí tương đương tối thiểu từ 1-2 năm\n"
+"                                                <br/>\n"
+"                                                <br/>\n"
+"                                                - Ý tưởng và gu thẩm mỹ tốt, chăm chỉ, có tinh thần trách nhiệm\n"
+"                                                và thái độ tích cực với công việc;\n"
+"                                                <br/>\n"
+"                                                <br/>\n"
+"                                                - Năng động, giao tiếp tốt, có khả năng làm việc và nắm bắt công\n"
+"                                                việc trực tiếp từ khách hàng;\n"
+"                                                <br/>\n"
+"                                                <br/>\n"
+"                                                - Nắm vững chuyên môn về thiết kế đồ họa và sử dụng thành thạo\n"
+"                                                các phần mềm đồ họa;"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "13,000,000 - 18,000,000 VNĐ"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "<br/>\n"
+"                                    <span>\n"
+"                                        <i class=\"fa fa-map-marker fa-fw\"/>\n"
+"                                        Hà Nội\n"
+"                                    </span>\n"
+"                                    <br/>\n"
+"                                    <span>\n"
+"                                        <i class=\"fa fa-calendar-check-o fa-fw\"/>\n"
+"                                        Hạn nộp hồ sơ\n"
+"                                    </span>"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "<font style=\"color: black\">Tìm kiếm</font>"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "<i class=\"fa fa-briefcase\"/>\n"
+"                                                    Chế độ nghỉ phép"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.index
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "<i class=\"fa fa-clock-o\" title=\"Publication date\" role=\"img\" aria-label=\"Publication date\"/>"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "<i class=\"fa fa-credit-card\"/>\n"
+"                                                    Công tác phí"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "<i class=\"fa fa-dollar fa-fw\"/>\n"
+"                                        Lương: 20 triệu đô"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_department_view_kanban_inherited
+msgid "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "<i class=\"fa fa-graduation-cap\"/>\n"
+"                                                    Đào tạo"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "<i class=\"fa fa-line-chart\"/>\n"
+"                                                    Tăng lương"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "<i class=\"fa fa-medkit\"/>\n"
+"                                                    Bảo hiểm"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "<i class=\"fa fa-money\"/>\n"
+"                                                    Phụ cấp"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "<i class=\"fa fa-money\"/>\n"
+"                                                    Phụ cấp thâm niên"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "<i class=\"fa fa-plane\"/>\n"
+"                                                    Du Lịch"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "<i class=\"fa fa-usd\"/>\n"
+"                                                    Thưởng"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_department_view_kanban_inherited
+msgid "<i class=\"fa fa-user\" role=\"img\" aria-label=\"Manager\"/>"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_contract_view_form_inherit
+msgid "<span>/ tháng</span>"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "<span>Job tags:</span>"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_department_view_kanban_inherited
+msgid "<span>Reporting</span>"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_department_view_kanban_inherited
+msgid "<span>To Approve</span>"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_department_view_kanban_inherited
+msgid "<span>To Do</span>"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+msgid "<span>năm</span>"
+msgstr ""
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_employee.py:249
+#, python-format
+msgid "API key for GeoCoding (Places) required.\n"
+"\n"
+"                              Save this key in System Parameters with key: google.api_key_geocode, value: <your api key>\n"
+"                              Visit https://developers.google.com/maps/documentation/geocoding/get-api-key for more information.\n"
+"                              "
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_department_view_kanban_inherited
+msgid "Add employee"
+msgstr "Thêm nhân viên"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_department_view_kanban_inherited
+msgid "Add new child department"
+msgstr "Thêm Phòng/ban cấp dưới"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_contract__allowance
+msgid "Allowance"
+msgstr "Phụ cấp"
+
+#. module: sci_hrms
+#: model:ir.model,name:sci_hrms.model_hr_applicant
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_employee__applicants
+msgid "Applicant"
+msgstr "Ứng viên"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__applicants
+#: model:ir.ui.menu,name:sci_hrms.report_hr_applicant
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_applicant_view_tree2
+msgid "Applicants"
+msgstr "Ứng viên"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.detail
+msgid "Apply\n"
+"                                Now!"
+msgstr "Ứng\n"
+"                                Tuyển!"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.detail
+msgid "Apply Now!"
+msgstr "Ứng Tuyển"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_contract__basic_salary
+msgid "Basic salary"
+msgstr "Lương cơ bản"
+
+#. module: sci_hrms
+#: model:project.task.type,legend_blocked:sci_hrms.acc_request_new
+msgid "Blocked"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Bán hàng / Kinh doanh"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Bình Dương"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Bạn chưa sẵn sàng ứng tuyển?"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Bảo trì / Sửa chữa"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__type_id
+msgid "Bằng Cấp"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Bằng cấp"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.actions.act_window,name:sci_hrms.hr_group_job_action
+#: model:ir.model.fields,field_description:sci_hrms.field_employee_checklist__group_job_ids
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_group_job__name
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__group_job
+msgid "Bộ phận"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_max_emp_wizard
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_recruitment_point_wizard
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_employee.py:258
+#, python-format
+msgid "Cannot contact geolocation servers. Please make sure that your Internet connection is up and running (%s)."
+msgstr "Không thể kết nối với server."
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Cao đẳng"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_employee__entry_checklist_domain
+msgid "Check list domain"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.sci_hr_employee_view_search_inherit
+msgid "Checklist not fulfill"
+msgstr "Chưa đủ hồ sơ"
+
+#. module: sci_hrms
+#: model:ir.actions.act_window,name:sci_hrms.act_department_from_department
+msgid "Child Departments"
+msgstr "Phòng/ban cấp dưới"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_max_emp_report__at_date
+msgid "Choose a date"
+msgstr "Chọn ngày"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_max_emp_wizard
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_recruitment_point_wizard
+msgid "Choose your date"
+msgstr "Chọn ngày"
+
+#. module: sci_hrms
+#: selection:hr.job,experience:0
+msgid "Chưa có kinh nghiệm"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Chịu trách nhiệm toàn bộ phần thiết kế Marketing\n"
+"                                                (online/offline) và hình ảnh sản phẩm của công ty\n"
+"                                                <br/>\n"
+"                                                • Tiếp nhận thông tin yêu cầu cần thiết kế từ các team và các\n"
+"                                                phòng ban khác. Sắp xếp, phân chia công việc cho team\n"
+"                                                <br/>\n"
+"                                                • Chịu trách nhiệm ý tưởng trong toàn bộ thiết kế của team. Kiểm\n"
+"                                                duyệt trước khi gửi trả kết quả\n"
+"                                                <br/>\n"
+"                                                • Thực hiện mọi công việc liên quan đến thiết kế Marketing: các\n"
+"                                                chương trình bán hàng/ chương trình khuyến mãi/ xây dựng hình\n"
+"                                                ảnh thương hiệu.\n"
+"                                                <br/>\n"
+"                                                • Thực hiện việc kiểm soát thiết kế, màu sắc,…các sản phẩm thiết\n"
+"                                                kế khác theo đúng branding guidelines\n"
+"                                                <br/>\n"
+"                                                • Thực hiện việc lưu trữ hình ảnh/ file thiết kế/ clip phục vụ\n"
+"                                                hoạt động thiết kế\n"
+"                                                <br/>\n"
+"                                                • Báo cáo theo yêu cầu"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,help:sci_hrms.field_hr_job__group_job
+msgid "Chọn bộ phận nhóm vị trí"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.actions.act_window,help:sci_hrms.act_department_from_department
+msgid "Click to add a new department."
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model,name:sci_hrms.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cấu hình"
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_contract.py:186
+#, python-format
+msgid "Contract"
+msgstr "Hợp đồng"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_contract__name
+msgid "Contract Reference"
+msgstr "Mã hợp đồng"
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_contract.py:185
+#, python-format
+msgid "Contract template not available, please contact your admin."
+msgstr "Mẫu hợp đồng không tồn tại, cần liên hệ với admin."
+
+#. module: sci_hrms
+#: model:ir.actions.server,name:sci_hrms.ir_cron_data_device_update_maintenance_ir_actions_server
+#: model:ir.cron,cron_name:sci_hrms.ir_cron_data_device_update_maintenance
+#: model:ir.cron,name:sci_hrms.ir_cron_data_device_update_maintenance
+msgid "Contract: Xét tăng lương"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_employee_form_inherited
+msgid "Create account"
+msgstr "Tạo tài khoản"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_group_job__create_uid
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_industry_job__create_uid
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__create_uid
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_max_emp_report__create_uid
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_recruitment_point__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_group_job__create_date
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_industry_job__create_date
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__create_date
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_max_emp_report__create_date
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_recruitment_point__create_date
+msgid "Created on"
+msgstr "Tạo vào"
+
+#. module: sci_hrms
+#: selection:sci.hr.max.emp.report,type:0
+msgid "Current"
+msgstr "Hiện tại"
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/wizard/max_emp_report.py:23
+#, python-format
+msgid "Current employee report"
+msgstr "Số lượng nhân viên hiện tại"
+
+#. module: sci_hrms
+#: selection:hr.job,experience:0
+msgid "Có kinh nghiệm"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Cơ khí / Ô tô / Tự động hóa"
+msgstr ""
+
+#. module: sci_hrms
+#: selection:hr.job,salary_type:0
+msgid "Cạnh tranh"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Cấp bậc"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Cần Thơ"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_recruitment_point__date_range
+msgid "Date Range"
+msgstr "Thời gian"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_contract__salary_deadline_type
+msgid "Date Type"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_contract__decision_number
+msgid "Decision number"
+msgstr "Quyết định số"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__department
+#: model_terms:ir.ui.view,arch_db:sci_hrms.sci_hr_contract_view_search_inherit
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_hr_recruitment_period_filter
+msgid "Department"
+msgstr "Phòng/ban"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_group_job__display_name
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_industry_job__display_name
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__display_name
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_max_emp_report__display_name
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_recruitment_point__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: sci_hrms
+#. openerp-web
+#: code:addons/sci_hrms/static/src/xml/link_view.xml:6
+#, python-format
+msgid "Documentation"
+msgstr "Hồ sơ"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_hr_recruitment_period_filter
+msgid "Done in"
+msgstr "Kết thúc"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Dược phẩm"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Dịch vụ khách hàng"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_employee_form_inherited
+msgid "Edit user"
+msgstr "Phân quyền"
+
+#. module: sci_hrms
+#: sql_constraint:hr.applicant:0
+msgid "Email đã tồn tại!"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model,name:sci_hrms.model_hr_employee
+#: model:ir.model.fields,field_description:sci_hrms.field_project_task__employee_id
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: sci_hrms
+#: model:ir.model,name:sci_hrms.model_hr_contract
+msgid "Employee Contract"
+msgstr "Hợp đồng"
+
+#. module: sci_hrms
+#: model:ir.model,name:sci_hrms.model_employee_checklist
+msgid "Employee Documents"
+msgstr "Hồ sơ nhân viên"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_employee__employee_id
+msgid "Employee ID"
+msgstr "Mã nhân viên"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__no_of_employee_at_time
+msgid "Employee at time"
+msgstr "Nhân sự đầu kỳ"
+
+#. module: sci_hrms
+#: model:ir.actions.act_window,name:sci_hrms.sci_hr_report_employee_checklist
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_employee_entry_checklist_tree
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_recruitment_point_employee_tree
+msgid "Employees"
+msgstr "Nhân sự"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__employees_in
+msgid "Employees move in"
+msgstr "Nhân sự nhận việc"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__employees_out
+msgid "Employees move out"
+msgstr "Nhân sự nghỉ việc"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__end_date
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_recruitment_point__end_date
+msgid "End date"
+msgstr "Ngày kết thúc"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.sci_hr_contract_view_search_inherit
+msgid "End in"
+msgstr "Kết thúc"
+
+#. module: sci_hrms
+#: model:ir.ui.menu,name:sci_hrms.report_hr_employee_checklist
+msgid "Entry checklist"
+msgstr "Hồ sơ đầu vào"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__no_of_recruitment
+msgid "Expected New Employees"
+msgstr "Nhân viên mới dự kiến"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__expected_recruitment
+msgid "Expected recruitment"
+msgstr "Nhân viên cần tuyển"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__experience
+msgid "Experience"
+msgstr "Kinh nghiệm"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_website_form
+msgid "Google reCAPTCHA Reloaded"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_group_job_form
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_group_job_tree
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_industry_job_form
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_industry_job_tree
+#: model_terms:ir.ui.view,arch_db:sci_hrms.sci_hr_job_view_search_inherit
+msgid "Group"
+msgstr "Bộ phận"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_hr_recruitment_period_filter
+msgid "Group By"
+msgstr "Nhóm bởi"
+
+#. module: sci_hrms
+#: model:ir.model,name:sci_hrms.model_hr_department
+msgid "HR Department"
+msgstr "Phòng/ban"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__employees_num
+msgid "Hired employees"
+msgstr "Nhân viên đã tuyển"
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/wizard/max_emp_report.py:33
+#, python-format
+msgid "Historical employee report"
+msgstr "Báo cáo định biên"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_hr_recruitment_period_filter
+msgid "History"
+msgstr "Lịch sử"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Hà Nội"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Hành chính / Thư ký"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Hạn chót nộp hồ sơ"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Hải Phòng"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__point_kpi
+msgid "Hệ số điểm"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Hồ Chí Minh"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_group_job__id
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_industry_job__id
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__id
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_max_emp_report__id
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_recruitment_point__id
+msgid "ID"
+msgstr ""
+
+#. module: sci_hrms
+#: model:project.task.type,legend_normal:sci_hrms.acc_request_new
+msgid "In Progress"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_project_task__internal
+msgid "Internal"
+msgstr ""
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/captcha.py:28
+#, python-format
+msgid "Invalid Data!."
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_hr_recruitment_period_filter
+msgid "Job"
+msgstr "Vị trí"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__description
+msgid "Job Description"
+msgstr "Mô tả"
+
+#. module: sci_hrms
+#: model:ir.model,name:sci_hrms.model_hr_job
+msgid "Job Position"
+msgstr "Vị trí"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__job_position
+msgid "Job position"
+msgstr "Vị trí"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_current_emp_tree_view
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_history_emp_tree_view
+msgid "Job report"
+msgstr "Báo cáo"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__req_job
+msgid "Job requirements"
+msgstr "Yêu cầu công việc"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__categ_ids
+msgid "Job tags"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.detail
+msgid "Jobs"
+msgstr "Vị trí"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_employee__joining_date
+msgid "Joining Date"
+msgstr "Ngày gia nhập"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_contract__KPI_salary
+msgid "KPI salary"
+msgstr "Lương KPI"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Khác"
+msgstr ""
+
+#. module: sci_hrms
+#: selection:hr.job,experience:0
+msgid "Không yêu cầu kinh nghiệm"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+msgid "Kinh nghiệm"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_department__partner_longitude
+msgid "Kinh độ Địa lý"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Kế toán"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Kế toán / Kiểm toán"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_contract_view_form_inherit
+msgid "Kỳ tăng lương"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_contract__last_salary
+msgid "Kỳ xét duyệt lần cuối"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_group_job____last_update
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_industry_job____last_update
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period____last_update
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_max_emp_report____last_update
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_recruitment_point____last_update
+msgid "Last Modified on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_group_job__write_uid
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_industry_job__write_uid
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__write_uid
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_max_emp_report__write_uid
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_recruitment_point__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_group_job__write_date
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_industry_job__write_date
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__write_date
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_max_emp_report__write_date
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_recruitment_point__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: sci_hrms
+#: selection:sci.hr.recruitment.point,date_range:0
+msgid "Last month"
+msgstr "Tháng trước"
+
+#. module: sci_hrms
+#. openerp-web
+#: code:addons/sci_hrms/static/src/xml/link_view.xml:11
+#, python-format
+msgid "Log out"
+msgstr "Đăng xuất"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Luật / Pháp lý"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_contract_view_form_inherit
+msgid "Lương KPI"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_contract_view_form_inherit
+msgid "Lương cơ bản"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_contract_view_form_inherit
+msgid "Lương phụ cấp"
+msgstr ""
+
+#. module: sci_hrms
+#: selection:hr.job,salary_type:0
+msgid "Lương thỏa thuận"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_department_view_kanban_inherited
+msgid "Manager"
+msgstr "Quản lý"
+
+#. module: sci_hrms
+#: model:ir.ui.menu,name:sci_hrms.max_emp_report
+msgid "Maximum employee"
+msgstr "Định biên"
+
+#. module: sci_hrms
+#: model:ir.actions.act_window,name:sci_hrms.action_max_emp_wizard
+#: model:ir.model,name:sci_hrms.model_sci_hr_max_emp_report
+msgid "Maximum employee report"
+msgstr "Báo cáo định biên"
+
+#. module: sci_hrms
+#. openerp-web
+#: code:addons/sci_hrms/static/src/xml/link_view.xml:10
+#, python-format
+msgid "My Odoo.com account"
+msgstr ""
+
+#. module: sci_hrms
+#: sql_constraint:hr.employee:0
+msgid "Mã nhân viên đã tồn tại!"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Mô Tả Công Việc"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "MỌI NGƯỜI CÙNG XEM"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Mới tốt nghiệp / Thực tập"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Mức lương"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Mỹ thuật / Nghệ thuật / Thiết kế, Quảng cáo / Đối ngoại / Truyền\n"
+"                                                    Thông, Y tế / Chăm sóc sức khỏe"
+msgstr ""
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_applicant.py:64
+#, python-format
+msgid "New Employee %s Hired"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Nghành nghề"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Nghệ An"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.actions.act_window,name:sci_hrms.hr_industry_job_action
+#: model:ir.model,name:sci_hrms.model_hr_industry_job
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_industry_job__name
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__job_industry
+#: model:ir.ui.menu,name:sci_hrms.menu_hr_group_job
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Ngành nghề"
+msgstr ""
+
+#. module: sci_hrms
+#: selection:hr.contract,salary_deadline_type:0
+msgid "Ngày"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_contract__salary_year
+msgid "Ngày xét lương"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Nhà hàng / Khách sạn"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Nhân sự"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_department_view_kanban_inherited
+msgid "Nhân viên"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model,name:sci_hrms.model_hr_group_job
+msgid "Nhóm vị trí"
+msgstr ""
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_applicant.py:23
+#: code:addons/sci_hrms/models/hr_applicant.py:27
+#, python-format
+msgid "No recruitment currently opened for this job."
+msgstr "Vị trí đang không tuyển dụng"
+
+#. module: sci_hrms
+#: selection:hr.job,state:0
+msgid "Not Recruiting"
+msgstr "Đang không tuyển"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__applicants_num
+msgid "Number of applicants"
+msgstr "Số lượng ứng viên"
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_job.py:97
+#, python-format
+msgid "Number of employees is at limit."
+msgstr "Số nhân viên đã đến định biên."
+
+#. module: sci_hrms
+#: model:ir.model.fields,help:sci_hrms.field_hr_job__no_of_recruitment
+msgid "Number of new employees you expect to recruit."
+msgstr "Số lượng nhân viên bạn muốn tuyển"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Nơi làm việc"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Nộp đơn"
+msgstr ""
+
+#. module: sci_hrms
+#. openerp-web
+#: code:addons/sci_hrms/static/src/xml/link_view.xml:7
+#, python-format
+msgid "Open HRMS"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_department_view_kanban_inherited
+msgid "Phòng ban"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Phúc lợi"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+msgid "Phụ trách tuyển dụng"
+msgstr ""
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_employee.py:95
+#, python-format
+msgid "Please fill work email address before creating an account."
+msgstr "Nhập địa chỉ email trước khi tạo tài khoản."
+
+#. module: sci_hrms
+#. openerp-web
+#: code:addons/sci_hrms/static/src/xml/link_view.xml:9
+#, python-format
+msgid "Preferences"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_contract_view_form_inherit
+msgid "Print contract"
+msgstr "In hợp đồng"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__salary_proposed
+msgid "Proposed Salary"
+msgstr "Lương dự kiến"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__salary_proposed_extra
+msgid "Proposed Salary Extra"
+msgstr "Phụ cấp dự kiến"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Quản lý điều hành"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Quảng cáo / Đối ngoại / Truyền Thông"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.res_config_settings_view_form
+msgid "ReCaptcha Configuration"
+msgstr ""
+
+#. module: sci_hrms
+#: model:project.task.type,legend_done:sci_hrms.acc_request_new
+msgid "Ready for Next Stage"
+msgstr "Sẵn sàng cho bước tiếp theo"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_hr_recruitment_period_filter
+msgid "Recruiting"
+msgstr "Đang tuyển"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_applicant_view_graph2
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_applicant_view_pivot2
+msgid "Recruitment Analysis"
+msgstr "Phân tích tuyển dụng"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.sci_hr_job_kanban_inherit
+msgid "Recruitment Done"
+msgstr "Dừng tuyển dụng"
+
+#. module: sci_hrms
+#: model:ir.actions.act_window,name:sci_hrms.hr_job_recruitment_period_action
+#: model:ir.actions.act_window,name:sci_hrms.hr_recruitment_period_action
+#: model:ir.model,name:sci_hrms.model_hr_recruitment_period
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__periods
+#: model:ir.ui.menu,name:sci_hrms.report_hr_recruitment_period
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_recruitment_period_form
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_recruitment_period_tree
+msgid "Recruitment history"
+msgstr "Lịch sử tuyển dụng"
+
+#. module: sci_hrms
+#: selection:hr.job,state:0
+msgid "Recruitment in Progress"
+msgstr "Đang tuyển"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_applicant__recruit_period
+msgid "Recruitment period"
+msgstr "Đợt tuyển dụng"
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/wizard/recruitment_point.py:42
+#: model:ir.actions.act_window,name:sci_hrms.action_recruitment_point_wizard
+#: model:ir.model,name:sci_hrms.model_sci_hr_recruitment_point
+#: model:ir.ui.menu,name:sci_hrms.recruitment_point
+#, python-format
+msgid "Recruitment point"
+msgstr "Điểm tuyển dụng"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_employee_form_inherited
+msgid "Request account"
+msgstr "Yêu cầu tạo TK"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_employee__resignations
+msgid "Resignation"
+msgstr "Nghỉ việc"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_employee__hr_user_id
+#: model_terms:ir.ui.view,arch_db:sci_hrms.sci_hr_employee_view_search_inherit
+msgid "Responsible"
+msgstr "Người phụ trách"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_department__root_parent
+msgid "Root parent"
+msgstr "Thương hiệu"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.sci_hr_contract_view_search_inherit
+msgid "Running"
+msgstr "Đang trong kỳ hạn"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__salary_type
+msgid "Salary Type"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_employee__work_duration
+msgid "Seniority"
+msgstr "Thâm niên"
+
+#. module: sci_hrms
+#: model:ir.model.fields,help:sci_hrms.field_hr_job__state
+msgid "Set whether the recruitment process is open or closed for this job position."
+msgstr "Trạng thái tuyển dụng: đang tuyển hoặc đang không tuyển."
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_department_view_kanban_inherited
+msgid "Settings"
+msgstr "Cầu hình"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.sci_hr_applicant_view_search_inherit
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: sci_hrms
+#: selection:sci.hr.max.emp.report,type:0
+msgid "Specific date"
+msgstr "Ngày cụ thể"
+
+#. module: sci_hrms
+#: selection:sci.hr.recruitment.point,date_range:0
+msgid "Specific period"
+msgstr "Thời gian cụ thể"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+#: model_terms:ir.ui.view,arch_db:sci_hrms.sci_hr_job_kanban_inherit
+msgid "Start Recruitment"
+msgstr "Bắt đầu tuyển"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__start_date
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_recruitment_point__start_date
+msgid "Start date"
+msgstr "Ngày bắt đầu"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_hr_recruitment_period_filter
+msgid "Start in"
+msgstr "Bắt đầu"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.sci_hr_job_kanban_inherit
+msgid "Start recruitment"
+msgstr "Bắt đầu tuyển"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+msgid "Stop Recruitment"
+msgstr "Dừng tuyển"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__success_rate
+msgid "Success rate"
+msgstr "Tỷ lệ thành công"
+
+#. module: sci_hrms
+#: sql_constraint:hr.applicant:0
+msgid "SĐT đã tồn tại!"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+msgid "Số lượng tuyển"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "TRƯỞNG NHÓM THIẾT KẾ"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model,name:sci_hrms.model_project_task
+msgid "Task"
+msgstr ""
+
+#. module: sci_hrms
+#: model:project.project,label_tasks:sci_hrms.acc_request
+msgid "Tasks"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,help:sci_hrms.field_hr_employee__tz
+msgid "This field is used in order to define in which timezone the resources will work."
+msgstr ""
+
+#. module: sci_hrms
+#: selection:sci.hr.recruitment.point,date_range:0
+msgid "This month"
+msgstr "Tháng này"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_employee_form_inherited
+msgid "Thâm niên"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Thống kê"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_contract__salary_deadline
+msgid "Thời hạn xét duyệt"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_employee__tz
+msgid "Timezone"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Tiếp thị"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_recruitment_period__to_recruit
+msgid "To recruit"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.actions.act_window,name:sci_hrms.hr_contract_trial_action
+#: model:ir.ui.menu,name:sci_hrms.report_hr_employee_trial
+msgid "Trial contract"
+msgstr "Hợp đồng thử việc"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Truyền hình / Báo chí / Biên tập"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+msgid "Trưởng Bộ Phận"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Trưởng nhóm / Giám sát"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_sci_hr_max_emp_report__type
+msgid "Type"
+msgstr "Loại báo cáo"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Tài chính / Đầu tư"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_contract_view_form_inherit
+msgid "Tên hợp đồng!!"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Tìm thấy <span> </span> việc làm"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_contract__salary_status
+msgid "Tình trạng"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Tư vấn"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Tổ chức sự kiện"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__total_payroll
+msgid "Tổng định biên"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+msgid "Từ"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__date_open
+msgid "Từ Ngày"
+msgstr ""
+
+#. module: sci_hrms
+#: selection:hr.job,salary_type:0
+msgid "USD"
+msgstr ""
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_employee.py:264
+#, python-format
+msgid "Unable to geolocate, received the error:\n"
+"%s\n"
+"\n"
+"Google made this a paid feature.\n"
+"You should first enable billing on your Google account.\n"
+"Then, go to Developer Console, and enable the APIs:\n"
+"Geocoding, Maps Static, Maps Javascript.\n"
+"error_message"
+msgstr ""
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_contract.py:131
+#, python-format
+msgid "Undefined"
+msgstr "Chưa xác định"
+
+#. module: sci_hrms
+#: selection:hr.job,salary_type:0
+msgid "VNĐ"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_recruitment_point_wizard
+msgid "View recruitment point"
+msgstr "Điểm tuyển dụng"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_max_emp_wizard
+msgid "View report"
+msgstr "Xem báo cáo"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_department__partner_latitude
+msgid "Vĩ độ Địa lý"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Vận chuyển / Giao nhận / Kho vận"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model,name:sci_hrms.model_website
+msgid "Website"
+msgstr "Trang web"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Xuất nhập khẩu"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Y tế / Chăm sóc sức khỏe"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__experience_from
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__experience_to
+msgid "Years"
+msgstr "Năm"
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_applicant.py:68
+#, python-format
+msgid "You must define an Applied Job and a Contact Name for this applicant."
+msgstr ""
+
+#. module: sci_hrms
+#: model:mail.template,subject:sci_hrms.mail_template_data_unknown_employee_email_address
+msgid "Your document has not been created"
+msgstr ""
+
+#. module: sci_hrms
+#: model:mail.template,body_html:sci_hrms.mail_template_data_unknown_employee_email_address
+msgid "Your document has not been created because your email address is not recognized. Please send emails with the email address recorded on your employee information, or contact your HR manager."
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_website_form
+msgid "Your reCAPTCHA private key"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_website_form
+msgid "Your reCAPTCHA site key"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "Yêu Cầu Công Việc"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+msgid "Yêu cầu"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_department__child_department_count
+msgid "child nums"
+msgstr ""
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_contract.py:124
+#, python-format
+msgid "days"
+msgstr "Ngày"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_department__employee_count
+msgid "emp nums"
+msgstr ""
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_contract.py:126
+#, python-format
+msgid "months"
+msgstr "Tháng"
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_detail_jobs_inherit
+msgid "ngày bao nhiêu tháng bấy nhiêu"
+msgstr ""
+
+#. module: sci_hrms
+#: selection:hr.contract,salary_deadline_type:0
+msgid "năm"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "open positions"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_res_config_settings__recaptcha_private_key
+#: model:ir.model.fields,field_description:sci_hrms.field_website__recaptcha_private_key
+msgid "reCAPTCHA Private Key"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_website__recaptcha_site_key
+msgid "reCAPTCHA Site Key"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_res_config_settings__recaptcha_site_key
+msgid "reCAPTCHA site Key"
+msgstr ""
+
+#. module: sci_hrms
+#: selection:hr.contract,salary_deadline_type:0
+msgid "tháng"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.index
+msgid "unpublished"
+msgstr ""
+
+#. module: sci_hrms
+#: code:addons/sci_hrms/models/hr_contract.py:128
+#, python-format
+msgid "years"
+msgstr "Năm"
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_employee__hr_point_kpi
+msgid "Điểm tuyển dụng"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Điện / Điện tử / Điện lạnh"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.view_all_jobs_inherit
+msgid "Đà Nẵng"
+msgstr ""
+
+#. module: sci_hrms
+#: model:project.task.type,name:sci_hrms.acc_request_new
+msgid "Đăng ký người dùng"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+msgid "Đến"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__date_closed
+msgid "Đến Ngày"
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+msgid "Đến ngày.."
+msgstr ""
+
+#. module: sci_hrms
+#: model_terms:ir.ui.view,arch_db:sci_hrms.hr_job_survey
+msgid "Đề xuất"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_department__address_location
+msgid "Địa điểm"
+msgstr ""
+
+#. module: sci_hrms
+#: model:ir.model.fields,field_description:sci_hrms.field_hr_job__address_location
+msgid "Địa điểm làm việc"
+msgstr ""
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_contract__type_id
+msgid "Employee Category"
+msgstr "Kiểu hợp đồng"

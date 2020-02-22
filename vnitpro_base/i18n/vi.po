@@ -1,0 +1,780 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vnitpro_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-13 06:42+0000\n"
+"PO-Revision-Date: 2018-11-13 13:42+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.2\n"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_address
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_employee_address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_an_giang
+msgid "An Giang"
+msgstr "An Giang"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_attachment_date
+msgid "Attached date"
+msgstr "Ngày đính kèm tệp tin"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_ba_ria
+msgid "Bà Rịa - Vũng Tàu"
+msgstr "Bà Rịa - Vũng Tàu"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_binh_duong
+msgid "Bình Dương"
+msgstr "Bình Dương"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_binh_phuoc
+msgid "Bình Phước"
+msgstr "Bình Phước"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_binh_thuan
+msgid "Bình Thuận"
+msgstr "Bình Thuận"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_binh_dinh
+msgid "Bình Định"
+msgstr "Bình Định"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_bac_lieu
+msgid "Bạc Liêu"
+msgstr "Bạc Liêu"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_bac_giang
+msgid "Bắc Giang"
+msgstr "Bắc Giang"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_bac_kan
+msgid "Bắc Kạn"
+msgstr "Bắc Kạn"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_bac_ninh
+msgid "Bắc Ninh"
+msgstr "Bắc Ninh"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_ben_tre
+msgid "Bến Tre"
+msgstr "Bến Tre"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_ca_mau
+msgid "Ca Màu"
+msgstr "Cà Mau"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_cao_bang
+msgid "Cao Bằng"
+msgstr "Cao Bằng"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_attachment_file
+msgid "Choose File"
+msgstr "Chọn tệp tin"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_district_city_id
+msgid "City"
+msgstr "Thành phố"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_information_code
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_code
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city_code
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_district_code
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_ward_code
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_area_code
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_employee_code
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_employee_position_code
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_factory_code
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_location_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city_country_id
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_attachment_create_uid
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_permission_create_uid
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_create_uid
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city_create_uid
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_district_create_uid
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_ward_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_attachment_create_date
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_permission_create_date
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_create_date
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city_create_date
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_district_create_date
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_ward_create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_can_tho
+msgid "Cần Thơ"
+msgstr "Cần Thơ"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_permission_perm_unlink
+msgid "Delete permission"
+msgstr "Quyền xóa"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_attachment_description
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_information_description
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_description
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city_description
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_district_description
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_ward_description
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_area_description
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_employee_description
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_employee_position_description
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_factory_description
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_location_description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_attachment_display_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_information_display_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_permission_display_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_display_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city_display_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_district_display_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_ward_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_ward_district_id
+msgid "District"
+msgstr "Quận/Thành phố trực thuộc"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_email
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_employee_email
+msgid "Email"
+msgstr "Email"
+
+#. module: vnitpro_base
+#: code:addons/vnitpro_base/models/person.py:33
+#, python-format
+msgid "Email is invalid!"
+msgstr "Email chưa đúng định dạng!"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_attachment_file_name
+msgid "File name"
+msgstr "Tên tệp tin"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_gia_lai
+msgid "Gia Lai"
+msgstr "Gia Lai"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_ha_giang
+msgid "Hà Giang"
+msgstr "Hà Giang"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_ha_nam
+msgid "Hà Nam"
+msgstr "Hà Nam"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_ha_noi
+msgid "Hà Nội"
+msgstr "Hà Nội"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_ha_tinh
+msgid "Hà Tĩnh"
+msgstr "Hà Tĩnh"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_hoa_binh
+msgid "Hòa Bình"
+msgstr "Hòa Bình"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_hung_yen
+msgid "Hưng Yên"
+msgstr "Hưng Yên"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_hai_duong
+msgid "Hải Dương"
+msgstr "Hải Dương"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_hai_phong
+msgid "Hải Phòng"
+msgstr "Hải Phòng"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_hau_giang
+msgid "Hậu Giang"
+msgstr "Hậu Giang"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_attachment_id
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_information_id
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_permission_id
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_id
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city_id
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_district_id
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_ward_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vnitpro_base
+#: code:addons/vnitpro_base/models/base.py:41
+#, python-format
+msgid "Invalid Code, please try again ( Code only contains letters, numbers and character: / , \\ , _ ) ."
+msgstr "Mã không hợp lệ, xin vui lòng thử lại (Mã chỉ chứa chữ cái, số và các ký tự đặc biệt: /  _ ."
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_khanh_hoa
+msgid "Khánh Hòa"
+msgstr "Khánh Hòa"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_kien_giang
+msgid "Kiên Giang"
+msgstr "Kiên Giang"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_kom_tum
+msgid "Kon Tum"
+msgstr "Kon Tum"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_lai_chau
+msgid "Lai Châu"
+msgstr "Lai Châu"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_attachment___last_update
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_information___last_update
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_permission___last_update
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person___last_update
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city___last_update
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_district___last_update
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_ward___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_attachment_write_uid
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_permission_write_uid
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_write_uid
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city_write_uid
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_district_write_uid
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_ward_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_attachment_write_date
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_permission_write_date
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_write_date
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city_write_date
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_district_write_date
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_ward_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_long_an
+msgid "Long An"
+msgstr "Long An"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_lao_cai
+msgid "Lào Cai"
+msgstr "Lào Cai"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_lam_dong
+msgid "Lâm Đồng"
+msgstr "Lâm Đồng"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_lang_son
+msgid "Lạng Sơn"
+msgstr "Lạng Sơn"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_nam_dinh
+msgid "Nam Định"
+msgstr "Nam Định"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_information_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_district_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_ward_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_area_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_employee_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_employee_position_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_factory_name
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_location_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_nghe_an
+msgid "Nghệ An"
+msgstr "Nghệ An"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_ninh_binh
+msgid "Ninh Bình"
+msgstr "Ninh Bình"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_ninh_thuan
+msgid "Ninh Thuận"
+msgstr "Ninh Thuận"
+
+#. module: vnitpro_base
+#: selection:vnitpro.base.information,activate:0
+#: selection:vnitpro.base.person,activate:0
+#: selection:vnitpro.res.city,activate:0
+#: selection:vnitpro.res.district,activate:0
+#: selection:vnitpro.res.ward,activate:0
+#: selection:vnitpro.workflow.area,activate:0
+#: selection:vnitpro.workflow.employee,activate:0
+#: selection:vnitpro.workflow.employee.position,activate:0
+#: selection:vnitpro.workflow.factory,activate:0
+#: selection:vnitpro.workflow.location,activate:0
+msgid "Not used"
+msgstr "Không được sử dụng"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_phone
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_employee_phone
+msgid "Phone"
+msgstr "Điện thoại"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city_phone_code
+msgid "Phone Code"
+msgstr "Mã vùng điện thoại"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_phu_tho
+msgid "Phú Thọ"
+msgstr "Phú Thọ"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_phu_yen
+msgid "Phú Yên"
+msgstr "Phú Yên"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003002
+msgid "Phường Bách Khoa"
+msgstr "Phường Bách Khoa"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003004
+msgid "Phường Bùi Thị Xuân"
+msgstr "Phường Bùi Thị Xuân"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003003
+msgid "Phường Bạch Mai"
+msgstr "Phường Bạch Mai"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003001
+msgid "Phường Bạch Đằng"
+msgstr "Phường Bạch Đằng"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003005
+msgid "Phường Cầu Dền"
+msgstr "Phường Cầu Dền"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003009
+msgid "Phường Lê Đại Hành"
+msgstr "Phường Lê Đại Hành"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003010
+msgid "Phường Minh Khai"
+msgstr "Phường Minh Khai"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003012
+msgid "Phường Nguyễn Du"
+msgstr "Phường Nguyễn Du"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003011
+msgid "Phường Ngô Thì Nhậm"
+msgstr "Phường Ngô Thì Nhậm"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003013
+msgid "Phường Phạm Đình Hổ"
+msgstr "Phường Phạm Đình Hổ"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003014
+msgid "Phường Phố Huế"
+msgstr "Phường Phố Huế"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003015
+msgid "Phường Quỳnh Lôi"
+msgstr "Phường Quỳnh Lôi"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003016
+msgid "Phường Quỳnh Mai"
+msgstr "Phường Quỳnh Mai"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003017
+msgid "Phường Thanh Lương"
+msgstr "Phường Thanh Lương"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003018
+msgid "Phường Thanh Nhàn"
+msgstr "Phường Thanh Nhàn"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003019
+msgid "Phường Trương Định"
+msgstr "Phường Trương Định"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003020
+msgid "Phường Vĩnh tuy"
+msgstr "Phường Vĩnh tuy"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003006
+msgid "Phường Đống Mác"
+msgstr "Phường Đống Mác"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003007
+msgid "Phường Đồng Nhân"
+msgstr "Phường Đồng Nhân"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.ward,name:vnitpro_base.vietnam_ward_hanoid003008
+msgid "Phường Đồng Tâm"
+msgstr "Phường Đồng Tâm"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_image
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_employee_image
+msgid "Picture"
+msgstr "Ảnh"
+
+#. module: vnitpro_base
+#: code:addons/vnitpro_base/models/person.py:41
+#, python-format
+msgid "Please Provide valid Phone."
+msgstr "Số điện thoại chưa đúng định dạng."
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_quang_binh
+msgid "Quảng Bình"
+msgstr "Quảng Bình"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_quang_nam
+msgid "Quảng Nam"
+msgstr "Quảng Nam"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_quang_ngai
+msgid "Quảng Ngãi"
+msgstr "Quảng Ngãi"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_quang_ninh
+msgid "Quảng Ninh"
+msgstr "Quảng Ninh"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_quang_tri
+msgid "Quảng Trị"
+msgstr "Quảng Trị"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.district,name:vnitpro_base.vietnam_district_ba_dinh_hn
+msgid "Quận Ba Đình"
+msgstr "Quận Ba Đình"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.district,name:vnitpro_base.vietnam_district_cau_giay_hn
+msgid "Quận Cầu Giấy"
+msgstr "Quận Cầu Giấy"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.district,name:vnitpro_base.vietnam_district_hai_ba_trung_hn
+msgid "Quận Hai Bà Trưng"
+msgstr "Quận Hai Bà Trưng"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.district,name:vnitpro_base.vietnam_district_hoan_kiem_hn
+msgid "Quận Hoàn Kiếm"
+msgstr "Quận Hoàn Kiếm"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.district,name:vnitpro_base.vietnam_district_hoang_maihn
+msgid "Quận Hoàng Mai"
+msgstr "Quận Hoàng Mai"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.district,name:vnitpro_base.vietnam_district_long_bien_hn
+msgid "Quận Long Biên"
+msgstr "Quận Long Biên"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.district,name:vnitpro_base.vietnam_district_tay_ho_hn
+msgid "Quận Tây Hồ"
+msgstr "Quận Tây Hồ"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.district,name:vnitpro_base.vietnam_district_tu_liem_hn
+msgid "Quận Từ Liêm"
+msgstr "Quận Từ Liêm"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_permission_perm_read
+msgid "Read permission"
+msgstr "Quyền đọc"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_information_activate
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_person_activate
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_city_activate
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_district_activate
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_res_ward_activate
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_area_activate
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_employee_activate
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_employee_position_activate
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_factory_activate
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_workflow_location_activate
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_soc_trang
+msgid "Sóc Trăng"
+msgstr "Sóc Trăng"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_son_la
+msgid "Sơn La"
+msgstr "Sơn La"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_thanh_hoa
+msgid "Thanh Hóa"
+msgstr "Thanh Hóa"
+
+#. module: vnitpro_base
+#: sql_constraint:vnitpro.base.information:0
+#: sql_constraint:vnitpro.base.person:0 sql_constraint:vnitpro.res.city:0
+#: sql_constraint:vnitpro.res.district:0 sql_constraint:vnitpro.res.ward:0
+msgid "The code already exists, please try another."
+msgstr "Mã đã tồn tại, xin vui lòng thử lại."
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_ho_chi_minh
+msgid "Thành phố Hồ Chí Minh"
+msgstr "Thành phố Hồ Chí Minh"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_thai_binh
+msgid "Thải Bình"
+msgstr "Thải Bình"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_thai_nguyen
+msgid "Thải Nguyên"
+msgstr "Thải Nguyên"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_thua_thien_hue
+msgid "Thừa Thiên - Huế"
+msgstr "Thừa Thiên - Huế"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_tien_giang
+msgid "Tiền Giang"
+msgstr "Tiền Giang"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_tra_vinh
+msgid "Trà Vinh"
+msgstr "Trà Vinh"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_tuyen_quang
+msgid "Tuyên Quang"
+msgstr "Tuyên Quang"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_tay_ninh
+msgid "Tây Ninh"
+msgstr "Tây Ninh"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_attachment_user_id
+msgid "Upload Users"
+msgstr "Người tải"
+
+#. module: vnitpro_base
+#: selection:vnitpro.base.information,activate:0
+#: selection:vnitpro.base.person,activate:0
+#: selection:vnitpro.res.city,activate:0
+#: selection:vnitpro.res.district,activate:0
+#: selection:vnitpro.res.ward,activate:0
+#: selection:vnitpro.workflow.area,activate:0
+#: selection:vnitpro.workflow.employee,activate:0
+#: selection:vnitpro.workflow.employee.position,activate:0
+#: selection:vnitpro.workflow.factory,activate:0
+#: selection:vnitpro.workflow.location,activate:0
+msgid "Usage"
+msgstr "Được sử dụng"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_permission_user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_vinh_long
+msgid "Vĩnh Long"
+msgstr "Vĩnh Long"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_vinh_phuc
+msgid "Vĩnh Phúc"
+msgstr "Vĩnh Phúc"
+
+#. module: vnitpro_base
+#: model:ir.model.fields,field_description:vnitpro_base.field_vnitpro_base_permission_perm_write
+msgid "Write permission"
+msgstr "Quyền sửa"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_yen_bai
+msgid "Yên Bái"
+msgstr "Yên Bái"
+
+#. module: vnitpro_base
+#: model:ir.model,name:vnitpro_base.model_ir_actions_report
+msgid "ir.actions.report"
+msgstr "ir.actions.report"
+
+#. module: vnitpro_base
+#: model:ir.model,name:vnitpro_base.model_vnitpro_base_attachment
+msgid "vnitpro.base.attachment"
+msgstr "vnitpro.base.attachment"
+
+#. module: vnitpro_base
+#: model:ir.model,name:vnitpro_base.model_vnitpro_base_information
+msgid "vnitpro.base.information"
+msgstr "vnitpro.base.information"
+
+#. module: vnitpro_base
+#: model:ir.model,name:vnitpro_base.model_vnitpro_base_permission
+msgid "vnitpro.base.permission"
+msgstr "vnitpro.base.permission"
+
+#. module: vnitpro_base
+#: model:ir.model,name:vnitpro_base.model_vnitpro_base_person
+msgid "vnitpro.base.person"
+msgstr "vnitpro.base.person"
+
+#. module: vnitpro_base
+#: model:ir.model,name:vnitpro_base.model_vnitpro_res_city
+msgid "vnitpro.res.city"
+msgstr "vnitpro.res.city"
+
+#. module: vnitpro_base
+#: model:ir.model,name:vnitpro_base.model_vnitpro_res_district
+msgid "vnitpro.res.district"
+msgstr "vnitpro.res.district"
+
+#. module: vnitpro_base
+#: model:ir.model,name:vnitpro_base.model_vnitpro_res_ward
+msgid "vnitpro.res.ward"
+msgstr "vnitpro.res.ward"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_dien_bien
+msgid "Điện Biên"
+msgstr "Điện Biên"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_da_nang
+msgid "Đà Nẵng"
+msgstr "Đà Nẵng"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_dak_lak
+msgid "Đắk Lắk"
+msgstr "Đắk Lắk"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_dak_nong
+msgid "Đắk Nông"
+msgstr "Đắk Nông"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_dong_nai
+msgid "Đồng Nai"
+msgstr "Đồng Nai"
+
+#. module: vnitpro_base
+#: model:vnitpro.res.city,name:vnitpro_base.vietnam_city_dong_thap
+msgid "Đồng Tháp"
+msgstr "Đồng Tháp"

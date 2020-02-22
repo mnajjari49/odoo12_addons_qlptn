@@ -1,0 +1,1224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="applicant_rule_officer" model="ir.rule">
+            <field name="name">Applicant Rule Officer</field>
+            <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+            <field name="perm_create" eval="False"/>
+            <field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False)]</field>
+            <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_user'))]"/>
+        </record>
+
+        <record id="applicant_rule_manager" model="ir.rule">
+            <field name="name">Applicant Rule Manager</field>
+            <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+            <field name="domain_force">[(1,'=', 1)]</field>
+            <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_manager'))]"/>
+        </record>
+
+        <record id="hr_contract_type_trainee" model="hr.contract.type">
+            <field name="name">Học việc</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="hr_contract_type_probation" model="hr.contract.type">
+            <field name="name">Thử việc</field>
+            <field name="sequence">25</field>
+        </record>
+
+        <record id="hr_contract_type_seasonal" model="hr.contract.type">
+            <field name="name">Ngắn hạn</field>
+            <field name="sequence">30</field>
+        </record>
+
+        <record id="hr_contract_type_official" model="hr.contract.type">
+            <field name="name">Chính thức</field>
+            <field name="sequence">35</field>
+        </record>
+
+        <record id="acc_request_new" model="project.task.type">
+            <field name="name">Đăng ký người dùng</field>
+        </record>
+
+        <record id="acc_request" model="project.project">
+            <field name="name">Account requests</field>
+            <field name="type_ids" eval="[(4,ref('acc_request_new'))]"/>
+        </record>
+
+        <record id="mail_template_data_unknown_employee_email_address" model="mail.template">
+            <field name="name">HR: unknown employee bounce</field>
+            <field name="subject">Your document has not been created</field>
+            <field name="email_from">${user.email}</field>
+            <field name="email_to">${ctx['email_to']|safe}</field>
+            <field name="lang">${user.lang}</field>
+            <field name="model_id" ref="base.model_ir_module_module"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" ><![CDATA[Your document has not been created because your email address is not recognized. Please send emails with the email address recorded on your employee information, or contact your HR manager.]]></field>
+        </record>
+
+        <record id="director" model="hr.department">
+          <field name="name">Ban tổng giám đốc</field>
+        </record>
+
+        <record id="advisor" model="hr.department">
+          <field name="name">Ban Cố vấn</field>
+        </record>
+
+        <record id="ksnb" model="hr.department">
+          <field name="name">Khối Kiểm soát nội bộ</field>
+        </record>
+
+<!--        <record id="chairman" model="hr.department">-->
+<!--          <field name="name">Chủ tịch hội đồng quản trị</field>-->
+<!--        </record>-->
+
+        <record id="dep_DA" model="hr.department">
+          <field name="name">Thương hiệu Đông Á</field>
+        </record>
+
+        <record id="dep_DA_HN" model="hr.department">
+          <field name="name">Bệnh viện Đông Á Hà Nội</field>
+          <field name="parent_id" ref="dep_DA"/>
+        </record>
+
+        <record id="dep_DA_HCM" model="hr.department">
+          <field name="name">Bệnh viện Đông Á Hồ Chí Minh</field>
+          <field name="parent_id" ref="dep_DA"/>
+        </record>
+
+        <record id="dep_DA_V" model="hr.department">
+          <field name="name">Bệnh viện Đông Á Vinh</field>
+          <field name="parent_id" ref="dep_DA"/>
+        </record>
+
+        <record id="dep_DA_HP" model="hr.department">
+          <field name="name">Bệnh viện Đông Á Hải Phòng</field>
+          <field name="parent_id" ref="dep_DA"/>
+        </record>
+
+        <record id="dep_DA_DN" model="hr.department">
+          <field name="name">Bệnh viện Đông Á Đà nẵng</field>
+          <field name="parent_id" ref="dep_DA"/>
+        </record>
+
+        <record id="dep_DA_CT" model="hr.department">
+          <field name="name">Bệnh viện Đông Á Cần Thơ</field>
+          <field name="parent_id" ref="dep_DA"/>
+        </record>
+
+        <record id="dep_DA_BD" model="hr.department">
+          <field name="name">Bệnh viện Đông Á Bình Dương</field>
+          <field name="parent_id" ref="dep_DA"/>
+        </record>
+
+        <record id="dep_HH" model="hr.department">
+          <field name="name">Thương hiệu Hồng Hà</field>
+        </record>
+
+        <record id="dep_HH_BD" model="hr.department">
+          <field name="name">Bệnh viện Hồng Hà Bình Dương</field>
+          <field name="parent_id" ref="dep_HH"/>
+        </record>
+
+        <record id="dep_KN" model="hr.department">
+          <field name="name">Thương hiệu KangNam</field>
+        </record>
+
+        <record id="dep_KN_HN" model="hr.department">
+          <field name="name">Bệnh viện KangNam Hà Nội</field>
+          <field name="parent_id" ref="dep_KN"/>
+        </record>
+
+        <record id="dep_KN_HCM" model="hr.department">
+          <field name="name">Bệnh viện KangNam Hồ Chí Minh</field>
+          <field name="parent_id" ref="dep_KN"/>
+        </record>
+
+        <record id="dep_PR" model="hr.department">
+          <field name="name">Thương hiệu Paris</field>
+        </record>
+
+        <record id="dep_PR_THD_HN" model="hr.department">
+          <field name="name">Chi nhánh nha Trần Hưng Đạo - HN</field>
+          <field name="parent_id" ref="dep_PR"/>
+        </record>
+
+        <record id="dep_PR_TT_HN" model="hr.department">
+          <field name="name">Chi nhánh nha Thái Thịnh - HN</field>
+          <field name="parent_id" ref="dep_PR"/>
+        </record>
+
+        <record id="dep_PR_HP" model="hr.department">
+          <field name="name">Chi nhánh nha Hải Phòng</field>
+          <field name="parent_id" ref="dep_PR"/>
+        </record>
+
+        <record id="dep_PR_V" model="hr.department">
+          <field name="name">Chi nhánh nha Vinh</field>
+          <field name="parent_id" ref="dep_PR"/>
+        </record>
+
+        <record id="dep_PR_DN" model="hr.department">
+          <field name="name">Chi nhánh nha Đà Nẵng</field>
+          <field name="parent_id" ref="dep_PR"/>
+        </record>
+
+        <record id="Dep_PR_32_HCM" model="hr.department">
+          <field name="name">Chi nhánh nha 3/2 - HCM</field>
+          <field name="parent_id" ref="dep_PR"/>
+        </record>
+
+        <record id="dep_PR_CH_HCM" model="hr.department">
+          <field name="name">Chi nhánh nha Cộng hòa - HCM</field>
+          <field name="parent_id" ref="dep_PR"/>
+        </record>
+
+        <record id="dep_ACD" model="hr.department">
+          <field name="name">Thương hiệu Academy</field>
+        </record>
+
+        <record id="dep_ACD_HN" model="hr.department">
+          <field name="name">Chi nhánh Hà Nội</field>
+          <field name="parent_id" ref="dep_ACD"/>
+        </record>
+
+        <record id="dep_ACD_HCM" model="hr.department">
+          <field name="name">Chi nhánh Hồ Chí Minh</field>
+          <field name="parent_id" ref="dep_ACD"/>
+        </record>
+
+        <record id="dep_HR" model="hr.department">
+          <field name="name">Khối Hành chính nhân sự</field>
+        </record>
+
+        <record id="dep_HR_HN" model="hr.department">
+          <field name="name">Nhóm Hà Nội</field>
+          <field name="parent_id" ref="dep_HR"/>
+        </record>
+
+        <record id="dep_HR_HCM" model="hr.department">
+          <field name="name">Nhóm Hồ Chí Minh</field>
+          <field name="parent_id" ref="dep_HR"/>
+        </record>
+
+        <record id="dep_MKT" model="hr.department">
+          <field name="name">Khối Marketing</field>
+        </record>
+
+        <record id="dep_MKT_DA" model="hr.department">
+          <field name="name">Nhóm thương hiệu Đông Á</field>
+          <field name="parent_id" ref="dep_MKT"/>
+        </record>
+
+        <record id="dep_MKT_KN" model="hr.department">
+          <field name="name">Nhóm thương hiệu KangNam</field>
+          <field name="parent_id" ref="dep_MKT"/>
+        </record>
+
+        <record id="dep_MKT_PR" model="hr.department">
+          <field name="name">Nhóm thương hiệu Paris</field>
+          <field name="parent_id" ref="dep_MKT"/>
+        </record>
+
+        <record id="dep_MKT_ACD" model="hr.department">
+          <field name="name">Nhóm thương hiệu Academy</field>
+          <field name="parent_id" ref="dep_MKT"/>
+        </record>
+
+        <record id="dep_MKT_HH" model="hr.department">
+          <field name="name">Nhóm thương hiệu Hồng Hà</field>
+          <field name="parent_id" ref="dep_MKT"/>
+        </record>
+
+        <record id="dep_CS" model="hr.department">
+          <field name="name">Khối Dịch vụ Khách hàng</field>
+        </record>
+
+        <record id="dep_CS_DA" model="hr.department">
+          <field name="name">Nhóm thương hiệu Đông Á</field>
+          <field name="parent_id" ref="dep_CS"/>
+        </record>
+
+        <record id="dep_CS_KN" model="hr.department">
+          <field name="name">Nhóm thương hiệu KangNam</field>
+          <field name="parent_id" ref="dep_CS"/>
+        </record>
+
+        <record id="dep_CS_PR" model="hr.department">
+          <field name="name">Nhóm thương hiệu Paris</field>
+          <field name="parent_id" ref="dep_CS"/>
+        </record>
+
+        <record id="dep_CS_ACD" model="hr.department">
+          <field name="name">Nhóm thương hiệu Academy</field>
+          <field name="parent_id" ref="dep_CS"/>
+        </record>
+
+        <record id="dep_CS_HH" model="hr.department">
+          <field name="name">Nhóm thương hiệu Hồng Hà</field>
+          <field name="parent_id" ref="dep_CS"/>
+        </record>
+
+        <record id="dep_CS_QA" model="hr.department">
+          <field name="name">Nhóm QA</field>
+          <field name="parent_id" ref="dep_CS"/>
+        </record>
+
+        <record id="dep_IT" model="hr.department">
+          <field name="name">Khối Công nghệ thông tin</field>
+        </record>
+
+        <record id="dep_IT_HN" model="hr.department">
+          <field name="name">Nhóm Hà Nội</field>
+          <field name="parent_id" ref="dep_IT"/>
+        </record>
+
+        <record id="dep_IT_HCM" model="hr.department">
+          <field name="name">Nhóm Hồ Chí Minh</field>
+          <field name="parent_id" ref="dep_IT"/>
+        </record>
+
+        <record id="dep_MTN" model="hr.department">
+          <field name="name">Khối Bảo trì, Vận hành</field>
+        </record>
+
+        <record id="dep_MTN_HN" model="hr.department">
+          <field name="name">Nhóm Hà Nội</field>
+          <field name="parent_id" ref="dep_MTN"/>
+        </record>
+
+        <record id="dep_MTN_HCM" model="hr.department">
+          <field name="name">Nhóm Hồ Chí Minh</field>
+          <field name="parent_id" ref="dep_MTN"/>
+        </record>
+
+        <record id="dep_ACC" model="hr.department">
+          <field name="name">Khối Tài chính kế toán</field>
+        </record>
+
+        <record id="dep_ACC_HN" model="hr.department">
+          <field name="name">Nhóm Hà Nội</field>
+          <field name="parent_id" ref="dep_ACC"/>
+        </record>
+
+        <record id="dep_ACC_HCM" model="hr.department">
+          <field name="name">Nhóm Hồ Chí Minh</field>
+          <field name="parent_id" ref="dep_ACC"/>
+        </record>
+
+        <record id="dep_LGL" model="hr.department">
+          <field name="name">Khối Thanh tra, pháp chế</field>
+        </record>
+
+        <record id="dep_LGL_HN" model="hr.department">
+          <field name="name">Nhóm Hà Nội</field>
+          <field name="parent_id" ref="dep_LGL"/>
+        </record>
+
+        <record id="dep_LGL_HCM" model="hr.department">
+          <field name="name">Nhóm Hồ Chí Minh</field>
+          <field name="parent_id" ref="dep_LGL"/>
+        </record>
+
+        <record id="dep_PrJ" model="hr.department">
+          <field name="name">Khối Dự án</field>
+        </record>
+
+        <record id="dep_PrJ_HN" model="hr.department">
+          <field name="name">Nhóm Hà Nội</field>
+          <field name="parent_id" ref="dep_PrJ"/>
+        </record>
+
+        <record id="dep_PrJ_HCM" model="hr.department">
+          <field name="name">Nhóm Hồ Chí Minh</field>
+          <field name="parent_id" ref="dep_PrJ"/>
+        </record>
+
+        <record id="dep_AST" model="hr.department">
+          <field name="name">Khối Trợ lý</field>
+        </record>
+
+        <record id="dep_AST_HN" model="hr.department">
+          <field name="name">Nhóm Hà Nội</field>
+          <field name="parent_id" ref="dep_AST"/>
+        </record>
+
+        <record id="dep_AST_HCM" model="hr.department">
+          <field name="name">Nhóm Hồ Chí Minh</field>
+          <field name="parent_id" ref="dep_AST"/>
+        </record>
+
+        <record id="dep_FR" model="hr.department">
+          <field name="name">Khối Đối ngoại</field>
+        </record>
+
+        <record id="dep_FR_HN" model="hr.department">
+          <field name="name">Nhóm Hà Nội</field>
+          <field name="parent_id" ref="dep_FR"/>
+        </record>
+
+        <record id="dep_FR_HCM" model="hr.department">
+          <field name="name">Nhóm Hồ Chí Minh</field>
+          <field name="parent_id" ref="dep_FR"/>
+        </record>
+
+
+        <record id="hr_decision_number" model="ir.sequence">
+            <field name="name">HR Decision number</field>
+            <field name="code">hr.decision.number</field>
+            <field name="suffix">/%(year)s</field>
+            <field eval="4" name="padding" />
+            <field eval="True" name="use_date_range" />
+        </record>
+
+<!--        Hop dong thu viec SCI-->
+        <record model="temp.creation" id="sci_trial_contract_template">
+            <field name="template" type="base64" file="sci_hrms/data/HD_TV_SCI.docx"/>
+            <field name="current_datetime_positions_2">currentyear</field>
+            <field name="current_datetime_format_2">%Y</field>
+            <field name="current_datetime_format">Ngày %d tháng %m năm %Y</field>
+            <field name="name">HĐ thử việc SCI</field>
+            <field name="template_name">HD_TV_SCI.docx</field>
+            <field name="reference">sci-probation</field>
+            <field name="export_user_name" eval="True"/>
+            <field name="export_user_position">user</field>
+            <field name="current_datetime_positions">currentdate</field>
+            <field name="export_current_datetime" eval="True"/>
+            <field name="main_model" model="ir.model" search="[('model', '=', 'hr.contract')]"/>
+            <field name="access_groups" eval="[(6, 0, [ref('hr_recruitment.group_hr_recruitment_user')])]"/>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_1">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'to_upper': True}</field>
+            <field name="temp_mark">name1</field>
+            <field name="python_code">employee_id.display_name</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_2">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'male': 'Ông', 'female': 'Bà', 'to_upper': True}</field>
+            <field name="temp_mark">gender1</field>
+            <field name="python_code">employee_id.gender</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_3">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">birthday</field>
+            <field name="python_code">employee_id.birthday</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_4">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="temp_mark">birthplace</field>
+            <field name="python_code">employee_id.place_of_birth</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_5">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="temp_mark">tdcm</field>
+            <field name="python_code">employee_id.study_field</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_6">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="temp_mark">idnum</field>
+            <field name="python_code">employee_id.identification_id</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_7">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="temp_mark">address</field>
+            <field name="python_code">employee_id.address_home_id.street</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_8">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">startdate</field>
+            <field name="python_code">date_start</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_9">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m-%Y'}</field>
+            <field name="temp_mark">enddate</field>
+            <field name="python_code">date_end</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_10">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="temp_mark">position</field>
+            <field name="python_code">job_id.display_name</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_11">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">wage</field>
+            <field name="python_code">wage</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_12">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'n2w': True}</field>
+            <field name="temp_mark">wagechar</field>
+            <field name="python_code">wage</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_13">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="temp_mark">name2</field>
+            <field name="python_code">employee_id.name</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_14">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'male': 'Ông', 'female': 'Bà'}</field>
+            <field name="temp_mark">gender2</field>
+            <field name="python_code">employee_id.gender</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_15">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'to_upper': True}</field>
+            <field name="temp_mark">worklocation1</field>
+            <field name="python_code">employee_id.work_location</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_16">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="temp_mark">worklocation2</field>
+            <field name="python_code">employee_id.work_location</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_17">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">iddate</field>
+            <field name="python_code">employee_id.id_issue_date</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_18">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="temp_mark">idplace</field>
+            <field name="python_code">employee_id.id_issue_place</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_19">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">basicsalary</field>
+            <field name="python_code">basic_salary</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_20">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'n2w': True}</field>
+            <field name="temp_mark">basicsalarychar</field>
+            <field name="python_code">basic_salary</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_21">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">allowance</field>
+            <field name="python_code">allowance</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_22">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="temp_mark">decisionnum</field>
+            <field name="python_code">decision_number</field>
+        </record>
+        <record model="fields.line" id="sci_trial_contract_template_fields_line_23">
+            <field name="line" ref="sci_trial_contract_template"/>
+            <field name="temp_mark">contractnum</field>
+            <field name="python_code">name</field>
+        </record>
+
+<!--        HD thu viec HH-->
+        <record model="temp.creation" id="hh_trial_contract_template">
+            <field name="template" type="base64" file="sci_hrms/data/HD_TV_HH.docx"/>
+            <field name="current_datetime_positions_2">currentyear</field>
+            <field name="current_datetime_format_2">%Y</field>
+            <field name="current_datetime_format">Ngày %d tháng %m năm %Y</field>
+            <field name="name">HĐ thử việc HH</field>
+            <field name="template_name">HD_TV_HH.docx</field>
+            <field name="reference">sci_hrms.dep_HH-probation</field>
+            <field name="export_user_name" eval="True"/>
+            <field name="export_user_position">user</field>
+            <field name="current_datetime_positions">currentdate</field>
+            <field name="export_current_datetime" eval="True"/>
+            <field name="main_model" model="ir.model" search="[('model', '=', 'hr.contract')]"/>
+            <field name="access_groups" eval="[(6, 0, [ref('hr_recruitment.group_hr_recruitment_user')])]"/>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_1">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'to_upper': True}</field>
+            <field name="temp_mark">name1</field>
+            <field name="python_code">employee_id.display_name</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_2">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'male': 'Ông', 'female': 'Bà', 'to_upper': True}</field>
+            <field name="temp_mark">gender1</field>
+            <field name="python_code">employee_id.gender</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_3">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">birthday</field>
+            <field name="python_code">employee_id.birthday</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_4">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="temp_mark">birthplace</field>
+            <field name="python_code">employee_id.place_of_birth</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_5">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="temp_mark">tdcm</field>
+            <field name="python_code">employee_id.study_field</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_6">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="temp_mark">idnum</field>
+            <field name="python_code">employee_id.identification_id</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_7">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="temp_mark">address</field>
+            <field name="python_code">employee_id.address_home_id.street</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_8">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">startdate</field>
+            <field name="python_code">date_start</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_9">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m-%Y'}</field>
+            <field name="temp_mark">enddate</field>
+            <field name="python_code">date_end</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_10">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="temp_mark">position</field>
+            <field name="python_code">job_id.display_name</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_11">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">wage</field>
+            <field name="python_code">wage</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_12">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'n2w': True}</field>
+            <field name="temp_mark">wagechar</field>
+            <field name="python_code">wage</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_13">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="temp_mark">name2</field>
+            <field name="python_code">employee_id.name</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_14">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'male': 'Ông', 'female': 'Bà'}</field>
+            <field name="temp_mark">gender2</field>
+            <field name="python_code">employee_id.gender</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_15">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'to_upper': True}</field>
+            <field name="temp_mark">worklocation1</field>
+            <field name="python_code">employee_id.work_location</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_16">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="temp_mark">worklocation2</field>
+            <field name="python_code">employee_id.work_location</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_17">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">iddate</field>
+            <field name="python_code">employee_id.id_issue_date</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_18">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="temp_mark">idplace</field>
+            <field name="python_code">employee_id.id_issue_place</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_19">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">basicsalary</field>
+            <field name="python_code">basic_salary</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_20">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'n2w': True}</field>
+            <field name="temp_mark">basicsalarychar</field>
+            <field name="python_code">basic_salary</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_21">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">allowance</field>
+            <field name="python_code">allowance</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_22">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="temp_mark">decisionnum</field>
+            <field name="python_code">decision_number</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_23">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="temp_mark">contractnum</field>
+            <field name="python_code">name</field>
+        </record>
+        <record model="fields.line" id="hh_trial_contract_template_fields_line_24">
+            <field name="line" ref="hh_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d tháng %m năm %Y'}</field>
+            <field name="temp_mark">birthday2</field>
+            <field name="python_code">employee_id.birthday</field>
+        </record>
+
+<!--        HD thu viec KN-->
+        <record model="temp.creation" id="kn_trial_contract_template">
+            <field name="template" type="base64" file="sci_hrms/data/HD_TV_KN.docx"/>
+            <field name="current_datetime_positions_2">currentyear</field>
+            <field name="current_datetime_format_2">%Y</field>
+            <field name="current_datetime_format">Ngày %d tháng %m năm %Y</field>
+            <field name="name">HĐ thử việc KN</field>
+            <field name="template_name">HD_TV_KN.docx</field>
+            <field name="reference">sci_hrms.dep_KN-probation</field>
+            <field name="export_user_name" eval="True"/>
+            <field name="export_user_position">user</field>
+            <field name="current_datetime_positions">currentdate</field>
+            <field name="export_current_datetime" eval="True"/>
+            <field name="main_model" model="ir.model" search="[('model', '=', 'hr.contract')]"/>
+            <field name="access_groups" eval="[(6, 0, [ref('hr_recruitment.group_hr_recruitment_user')])]"/>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_1">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'to_upper': True}</field>
+            <field name="temp_mark">name1</field>
+            <field name="python_code">employee_id.display_name</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_2">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'male': 'Ông', 'female': 'Bà', 'to_upper': True}</field>
+            <field name="temp_mark">gender1</field>
+            <field name="python_code">employee_id.gender</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_3">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">birthday</field>
+            <field name="python_code">employee_id.birthday</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_4">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="temp_mark">birthplace</field>
+            <field name="python_code">employee_id.place_of_birth</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_5">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="temp_mark">tdcm</field>
+            <field name="python_code">employee_id.study_field</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_6">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="temp_mark">idnum</field>
+            <field name="python_code">employee_id.identification_id</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_7">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="temp_mark">address</field>
+            <field name="python_code">employee_id.address_home_id.street</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_8">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">startdate</field>
+            <field name="python_code">date_start</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_9">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m-%Y'}</field>
+            <field name="temp_mark">enddate</field>
+            <field name="python_code">date_end</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_10">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="temp_mark">position</field>
+            <field name="python_code">job_id.display_name</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_11">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">wage</field>
+            <field name="python_code">wage</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_12">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'n2w': True}</field>
+            <field name="temp_mark">wagechar</field>
+            <field name="python_code">wage</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_13">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="temp_mark">name2</field>
+            <field name="python_code">employee_id.name</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_14">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'male': 'Ông', 'female': 'Bà'}</field>
+            <field name="temp_mark">gender2</field>
+            <field name="python_code">employee_id.gender</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_15">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'to_upper': True}</field>
+            <field name="temp_mark">worklocation1</field>
+            <field name="python_code">employee_id.work_location</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_16">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="temp_mark">worklocation2</field>
+            <field name="python_code">employee_id.work_location</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_17">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">iddate</field>
+            <field name="python_code">employee_id.id_issue_date</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_18">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="temp_mark">idplace</field>
+            <field name="python_code">employee_id.id_issue_place</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_19">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">basicsalary</field>
+            <field name="python_code">basic_salary</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_20">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'n2w': True}</field>
+            <field name="temp_mark">basicsalarychar</field>
+            <field name="python_code">basic_salary</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_21">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">allowance</field>
+            <field name="python_code">allowance</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_22">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="temp_mark">decisionnum</field>
+            <field name="python_code">decision_number</field>
+        </record>
+        <record model="fields.line" id="kn_trial_contract_template_fields_line_23">
+            <field name="line" ref="kn_trial_contract_template"/>
+            <field name="temp_mark">contractnum</field>
+            <field name="python_code">name</field>
+        </record>
+
+<!--        HD thu viec PR-->
+        <record model="temp.creation" id="pr_trial_contract_template">
+            <field name="template" type="base64" file="sci_hrms/data/HD_TV_PR.docx"/>
+            <field name="current_datetime_positions_2">currentyear</field>
+            <field name="current_datetime_format_2">%Y</field>
+            <field name="current_datetime_format">Ngày %d tháng %m năm %Y</field>
+            <field name="name">HĐ thử việc PR</field>
+            <field name="template_name">HD_TV_PR.docx</field>
+            <field name="reference">sci_hrms.dep_PR-probation</field>
+            <field name="export_user_name" eval="True"/>
+            <field name="export_user_position">user</field>
+            <field name="current_datetime_positions">currentdate</field>
+            <field name="export_current_datetime" eval="True"/>
+            <field name="main_model" model="ir.model" search="[('model', '=', 'hr.contract')]"/>
+            <field name="access_groups" eval="[(6, 0, [ref('hr_recruitment.group_hr_recruitment_user')])]"/>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_1">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'to_upper': True}</field>
+            <field name="temp_mark">name1</field>
+            <field name="python_code">employee_id.display_name</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_2">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'male': 'Ông', 'female': 'Bà', 'to_upper': True}</field>
+            <field name="temp_mark">gender1</field>
+            <field name="python_code">employee_id.gender</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_3">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">birthday</field>
+            <field name="python_code">employee_id.birthday</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_4">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="temp_mark">birthplace</field>
+            <field name="python_code">employee_id.place_of_birth</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_5">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="temp_mark">tdcm</field>
+            <field name="python_code">employee_id.study_field</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_6">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="temp_mark">idnum</field>
+            <field name="python_code">employee_id.identification_id</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_7">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="temp_mark">address</field>
+            <field name="python_code">employee_id.address_home_id.street</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_8">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">startdate</field>
+            <field name="python_code">date_start</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_9">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m-%Y'}</field>
+            <field name="temp_mark">enddate</field>
+            <field name="python_code">date_end</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_10">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="temp_mark">position</field>
+            <field name="python_code">job_id.display_name</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_11">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">wage</field>
+            <field name="python_code">wage</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_12">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'n2w': True}</field>
+            <field name="temp_mark">wagechar</field>
+            <field name="python_code">wage</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_13">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="temp_mark">name2</field>
+            <field name="python_code">employee_id.name</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_14">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'male': 'Ông', 'female': 'Bà'}</field>
+            <field name="temp_mark">gender2</field>
+            <field name="python_code">employee_id.gender</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_15">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'to_upper': True}</field>
+            <field name="temp_mark">worklocation1</field>
+            <field name="python_code">employee_id.work_location</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_16">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="temp_mark">worklocation2</field>
+            <field name="python_code">employee_id.work_location</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_17">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">iddate</field>
+            <field name="python_code">employee_id.id_issue_date</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_18">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="temp_mark">idplace</field>
+            <field name="python_code">employee_id.id_issue_place</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_19">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">basicsalary</field>
+            <field name="python_code">basic_salary</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_20">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'n2w': True}</field>
+            <field name="temp_mark">basicsalarychar</field>
+            <field name="python_code">basic_salary</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_21">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">allowance</field>
+            <field name="python_code">allowance</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_22">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="temp_mark">decisionnum</field>
+            <field name="python_code">decision_number</field>
+        </record>
+        <record model="fields.line" id="pr_trial_contract_template_fields_line_23">
+            <field name="line" ref="pr_trial_contract_template"/>
+            <field name="temp_mark">contractnum</field>
+            <field name="python_code">name</field>
+        </record>
+
+<!--        HD thu viec HV-->
+        <record model="temp.creation" id="aca_trial_contract_template">
+            <field name="template" type="base64" file="sci_hrms/data/HD_TV_HV.docx"/>
+            <field name="current_datetime_positions_2">currentyear</field>
+            <field name="current_datetime_format_2">%Y</field>
+            <field name="current_datetime_format">Ngày %d tháng %m năm %Y</field>
+            <field name="name">HĐ Thử việc HV</field>
+            <field name="template_name">HD_TV_HV.docx</field>
+            <field name="reference">sci_hrms.dep_ACD-probation</field>
+            <field name="export_user_name" eval="True"/>
+            <field name="export_user_position">user</field>
+            <field name="current_datetime_positions">currentdate</field>
+            <field name="export_current_datetime" eval="True"/>
+            <field name="main_model" model="ir.model" search="[('model', '=', 'hr.contract')]"/>
+            <field name="access_groups" eval="[(6, 0, [ref('hr_recruitment.group_hr_recruitment_user')])]"/>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_1">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'to_upper': True}</field>
+            <field name="temp_mark">name1</field>
+            <field name="python_code">employee_id.display_name</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_2">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'male': 'Ông', 'female': 'Bà', 'to_upper': True}</field>
+            <field name="temp_mark">gender1</field>
+            <field name="python_code">employee_id.gender</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_3">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">birthday</field>
+            <field name="python_code">employee_id.birthday</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_4">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="temp_mark">birthplace</field>
+            <field name="python_code">employee_id.place_of_birth</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_5">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="temp_mark">tdcm</field>
+            <field name="python_code">employee_id.study_field</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_6">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="temp_mark">idnum</field>
+            <field name="python_code">employee_id.identification_id</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_7">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="temp_mark">address</field>
+            <field name="python_code">employee_id.address_home_id.street</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_8">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">startdate</field>
+            <field name="python_code">date_start</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_9">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m-%Y'}</field>
+            <field name="temp_mark">enddate</field>
+            <field name="python_code">date_end</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_10">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="temp_mark">position</field>
+            <field name="python_code">job_id.display_name</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_11">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">wage</field>
+            <field name="python_code">wage</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_12">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'n2w': True}</field>
+            <field name="temp_mark">wagechar</field>
+            <field name="python_code">wage</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_13">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="temp_mark">name2</field>
+            <field name="python_code">employee_id.name</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_14">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'male': 'Ông', 'female': 'Bà'}</field>
+            <field name="temp_mark">gender2</field>
+            <field name="python_code">employee_id.gender</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_15">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'to_upper': True}</field>
+            <field name="temp_mark">worklocation1</field>
+            <field name="python_code">employee_id.work_location</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_16">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="temp_mark">worklocation2</field>
+            <field name="python_code">employee_id.work_location</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_17">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">iddate</field>
+            <field name="python_code">employee_id.id_issue_date</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_18">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="temp_mark">idplace</field>
+            <field name="python_code">employee_id.id_issue_place</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_19">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">basicsalary</field>
+            <field name="python_code">basic_salary</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_20">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'n2w': True}</field>
+            <field name="temp_mark">basicsalarychar</field>
+            <field name="python_code">basic_salary</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_21">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">allowance</field>
+            <field name="python_code">allowance</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_22">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="temp_mark">decisionnum</field>
+            <field name="python_code">decision_number</field>
+        </record>
+        <record model="fields.line" id="aca_trial_contract_template_fields_line_23">
+            <field name="line" ref="aca_trial_contract_template"/>
+            <field name="temp_mark">contractnum</field>
+            <field name="python_code">name</field>
+        </record>
+
+<!--        HD hoc viec SCI-->
+        <record model="temp.creation" id="sci_trainee_contract_template">
+            <field name="template" type="base64" file="sci_hrms/data/HD_HV_SCI.docx"/>
+            <field name="current_datetime_positions_2">currentyear</field>
+            <field name="current_datetime_format_2">%Y</field>
+            <field name="current_datetime_format">Ngày %d tháng %m năm %Y</field>
+            <field name="name">HĐ học việc SCI</field>
+            <field name="template_name">HD_HV_SCI.docx</field>
+            <field name="reference">sci-trainee</field>
+            <field name="export_user_name" eval="True"/>
+            <field name="export_user_position">user</field>
+            <field name="current_datetime_positions">currentdate</field>
+            <field name="export_current_datetime" eval="True"/>
+            <field name="main_model" model="ir.model" search="[('model', '=', 'hr.contract')]"/>
+            <field name="access_groups" eval="[(6, 0, [ref('hr_recruitment.group_hr_recruitment_user')])]"/>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_1">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="replacement_format">{'to_upper': True}</field>
+            <field name="temp_mark">name1</field>
+            <field name="python_code">employee_id.display_name</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_2">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="replacement_format">{'male': 'Ông', 'female': 'Bà', 'to_upper': True}</field>
+            <field name="temp_mark">gender1</field>
+            <field name="python_code">employee_id.gender</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_3">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">birthday</field>
+            <field name="python_code">employee_id.birthday</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_4">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="temp_mark">birthplace</field>
+            <field name="python_code">employee_id.place_of_birth</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_5">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="temp_mark">idnum</field>
+            <field name="python_code">employee_id.identification_id</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_6">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="temp_mark">address</field>
+            <field name="python_code">employee_id.address_home_id.street</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_7">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">startdate</field>
+            <field name="python_code">date_start</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_8">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m-%Y'}</field>
+            <field name="temp_mark">enddate</field>
+            <field name="python_code">date_end</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_9">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="temp_mark">position</field>
+            <field name="python_code">job_id.display_name</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_10">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="temp_mark">name2</field>
+            <field name="python_code">employee_id.name</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_11">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="replacement_format">{'male': 'Ông', 'female': 'Bà'}</field>
+            <field name="temp_mark">gender2</field>
+            <field name="python_code">employee_id.gender</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_12">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="replacement_format">{'to_upper': True}</field>
+            <field name="temp_mark">worklocation1</field>
+            <field name="python_code">employee_id.work_location</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_13">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="temp_mark">worklocation2</field>
+            <field name="python_code">employee_id.work_location</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_14">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+            <field name="temp_mark">iddate</field>
+            <field name="python_code">employee_id.id_issue_date</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_15">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="temp_mark">idplace</field>
+            <field name="python_code">employee_id.id_issue_place</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_16">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="replacement_format">{'to_int': True}</field>
+            <field name="temp_mark">basicsalary</field>
+            <field name="python_code">basic_salary</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_17">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="replacement_format">{'n2w': True}</field>
+            <field name="temp_mark">basicsalarychar</field>
+            <field name="python_code">basic_salary</field>
+        </record>
+        <record model="fields.line" id="sci_trainee_contract_template_fields_line_18">
+            <field name="line" ref="sci_trainee_contract_template"/>
+            <field name="temp_mark">contractnum</field>
+            <field name="python_code">name</field>
+        </record>
+
+    </data>
+</odoo>

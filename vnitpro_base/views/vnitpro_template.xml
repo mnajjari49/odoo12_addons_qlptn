@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="vnitpro_ico" name="SCI Group" inherit_id="web.layout">
+            <xpath expr="//html/head/title" position="replace">
+                <title>SCI Group</title>
+            </xpath>
+            <xpath expr="//html/head/link[1]" position="replace">
+                <link rel="shortcut icon" href="/vnitpro_base/static/src/img/icon.png" type="image/x-icon" />
+            </xpath>
+        </template>
+    </data>
+</odoo>

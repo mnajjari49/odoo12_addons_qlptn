@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_vnitpro_access_recent" name="Access Recents" sequence="1" web_icon="vnitpro_base,static/description/icon_dashboard.png" />
+        <menuitem id="menu_vnitpro_base_configure" name="Configure" sequence="100" web_icon="vnitpro_base,static/description/icon.png" groups="vnitpro_base.group_configure" />
+        <!-- <menuitem id="menu_vnitpro_base_general" name="General" sequence="100" parent="menu_vnitpro_base_configure" />
+        <menuitem id="menu_vnitpro_base_project" name="Project Management" sequence="28" parent="menu_vnitpro_base_configure" />
+        <menuitem id="menu_vnitpro_base_procurement" name="Procurement Management" sequence="29" parent="menu_vnitpro_base_configure" />
+        <menuitem id="menu_vnitpro_base_contract" name="Contract Management" sequence="30" parent="menu_vnitpro_base_configure" />
+        <menuitem id="menu_vnitpro_base_consumption" name="Consumption Management" sequence="31" parent="menu_vnitpro_base_configure" /> -->
+    </data>
+</odoo>

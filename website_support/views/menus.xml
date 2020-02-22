@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <menuitem
+      id="website_support_parent_menu"
+      name="Quản lý Tickets"
+      web_icon="website_support,static/description/icon.png"
+      groups="support_staff"
+      sequence="40"/>
+    <menuitem id="website_support_ticket_menu" name="Danh sách Tickets" parent="website_support_parent_menu" action="website_support_ticket_action" groups="support_staff" sequence="10"/>
+
+    <menuitem id="website_support_config_parent_menu" name="Cấu hình" parent="website_support_parent_menu" groups="support_manager" sequence="999"/>
+<!--    <menuitem id="website_support_ticket_category_menu" name="Categories" parent="website_support_config_parent_menu" action="website_support_ticket_category_action" groups="support_manager" sequence="10"/>-->
+<!--    <menuitem id="website_support_ticket_subcategory_menu" name="Sub Categories" parent="website_support_config_parent_menu" action="website_support_ticket_subcategory_action" groups="support_manager" sequence="20"/>-->
+<!--    <menuitem id="website_support_ticket_state_menu" name="Trạng thái" parent="website_support_config_parent_menu" action="website_support_ticket_state_action" groups="support_manager" sequence="30"/>-->
+    <menuitem id="website_support_ticket_tag_menu" name="Tags" parent="website_support_config_parent_menu" action="website_support_ticket_tag_action" groups="support_manager" sequence="40"/>
+</odoo>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_applicant_view_pivot2" model="ir.ui.view">
+             <field name="name">hr.applicant.pivot</field>
+             <field name="model">hr.applicant</field>
+             <field name="arch" type="xml">
+                 <pivot string="Recruitment Analysis" disable_linking="True">
+                     <field name="stage_id" type="col"/>
+                     <field name="source_id" type="row"/>
+                 </pivot>
+             </field>
+        </record>
+
+        <record id="hr_applicant_view_graph2" model="ir.ui.view">
+             <field name="name">hr.applicant.graph</field>
+             <field name="model">hr.applicant</field>
+             <field name="arch" type="xml">
+                 <graph string="Recruitment Analysis">
+                     <field name="stage_id" type="col"/>
+                     <field name="source_id" type="row"/>
+                 </graph>
+             </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_applicant_view_tree2">
+            <field name="name">Applicants</field>
+            <field name="model">hr.applicant</field>
+            <field name="arch" type="xml">
+                <tree string="Applicants" decoration-muted="active==False" decoration-info="emp_id!=False">
+                    <field name="job_id"/>
+                    <field name="department_id"/>
+                    <field name="create_date"/>
+                    <field name="name"/>
+                    <field name="source_id"/>
+                    <field name="partner_phone"/>
+                    <field name="email_from"/>
+                    <field name="gender"/>
+                    <field name="birthday"/>
+                    <field name="address"/>
+                    <field name="qualification"/>
+                    <field name="college"/>
+                    <field name="last_workplace"/>
+                    <field name="description"/>
+                    <field name="stage_id"/>
+                    <field name="user_id"/>
+                    <field name="active" invisible="1"/>
+                    <field name="emp_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sci_hr_applicant_view_search_inherit" model="ir.ui.view">
+            <field name="name">sci_hr_applicant_view_search_inherit</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='User']" position="after">
+                    <filter string="Source" name="source_id" context="{'group_by':'source_id'}" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sci_hr_applicant_view_form_inherit" model="ir.ui.view">
+            <field name="name">sci_hr_applicant_view_form_inherit</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.crm_case_form_view_job"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='kanban_state']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//h2" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='source_id']" position="after">
+                    <field name="social_facebook"></field>
+                </xpath>
+                <xpath expr="//field[@name='medium_id']" position="replace">
+                    <field name="categ_ids" widget="many2many_tags"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_recruitment.hr_applicant_action_analysis" model="ir.actions.act_window">
+            <field name="name">Recruitment Analysis</field>
+            <field name="res_model">hr.applicant</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,pivot,graph</field>
+            <field name="search_view_id" ref="hr_recruitment.hr_applicant_view_search"/>
+            <field name="view_ids" eval="[
+                (5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('hr_applicant_view_tree2')}),
+                (0, 0, {'view_mode': 'pivot', 'view_id': ref('hr_applicant_view_pivot2')}),
+                (0, 0, {'view_mode': 'graph', 'view_id': ref('hr_applicant_view_graph2')})]"/>
+            <field name="context">{'search_default_year': 1, 'search_default_User': 1, 'active_test': False}</field>
+        </record>
+
+<!--        <record model="ir.actions.act_window.view" id="act_hr_applicant_analysis_tree">-->
+<!--            <field name="act_window_id" ref="hr_recruitment.hr_applicant_action_analysis" />-->
+<!--            <field name="sequence" eval="5" />-->
+<!--            <field name="view_mode">tree</field>-->
+<!--            <field name="view_id" ref="hr_applicant_view_tree2" />-->
+<!--        </record>-->
+
+<!--        <record model="ir.actions.act_window.view" id="act_hr_applicant_analysis_pivot">-->
+<!--            <field name="act_window_id" ref="hr_recruitment.hr_applicant_action_analysis" />-->
+<!--            <field name="sequence" eval="10" />-->
+<!--            <field name="view_mode">pivot</field>-->
+<!--            <field name="view_id" ref="hr_applicant_view_pivot2" />-->
+<!--        </record>-->
+
+<!--        <record model="ir.actions.act_window.view" id="act_hr_applicant_analysis_graph">-->
+<!--            <field name="act_window_id" ref="hr_recruitment.hr_applicant_action_analysis" />-->
+<!--            <field name="sequence" eval="15" />-->
+<!--            <field name="view_mode">graph</field>-->
+<!--            <field name="view_id" ref="hr_applicant_view_graph2" />-->
+<!--        </record>-->
+
+        <record model="ir.actions.act_window.view" id="hr_recruitment.action_hr_sec_kanban_view_act_job">
+            <field name="sequence" eval="11"/>
+        </record>
+
+        <menuitem id="hr_recruitment.report_hr_recruitment" name="Reports"
+                   parent="hr_recruitment.menu_hr_recruitment_root" sequence="99" />
+        <menuitem name="Applicants" id="report_hr_applicant" parent="hr_recruitment.report_hr_recruitment"
+                  action="hr_recruitment.hr_applicant_action_analysis" sequence="10" groups="hr_recruitment.group_hr_recruitment_manager"/>
+
+    </data>
+</odoo>

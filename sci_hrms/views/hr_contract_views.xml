@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_contract_view_form_inherit" model="ir.ui.view">
+            <field name="name">hr_contract_view_form_inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='toggle_active']" position="replace">
+                    <button type="object" name="print_contract" icon="fa-file-word-o" string="Print contract"/>
+                </xpath>
+                <xpath expr="//div[@name='title']" position="replace">
+                    <div class="oe_title" name="title" style ='width:100%;'>
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" placeholder="Tên hợp đồng!!"/>
+                        </h1>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='reported_to_secretariat']" position="replace">
+                    <field name="decision_number" />
+                </xpath>
+                <xpath expr="//label[@for='wage']" position="before">
+                    <label for="basic_salary"/>
+                    <div class="o_row" name="basic_salary">
+                        <field name="basic_salary" nolabel="1" string="Lương cơ bản"/>
+                        <span>/ tháng</span>
+                    </div>
+                    <label for="allowance"/>
+                    <div class="o_row" name="allowance">
+                        <field name="allowance" string="Lương phụ cấp"/>
+                        <span>/ tháng</span>
+                    </div>
+                    <label for="KPI_salary"/>
+                    <div class="o_row" name="KPI_salary">
+                        <field name="KPI_salary" string="Lương KPI"/>
+                        <span>/ tháng</span>
+                    </div>
+                </xpath>
+                <xpath expr="//page[@name='information']" position="before">
+                    <page name="salary_deadline" string="Kỳ tăng lương">
+                        <group>
+                            <group>
+                                <label for="salary_deadline" />
+                                <div class="o_row" name="salary_deadline">
+                                    <field name="salary_deadline"/>
+                                    <field name="salary_deadline_type"/>
+                                </div>
+                            </group>
+                            <group>
+                                <field name="salary_year" />
+                                <field name="salary_status" class="red_color_bold"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

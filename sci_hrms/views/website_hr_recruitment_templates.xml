@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="index" name="Jobs" inherit_id="website_hr_recruitment.index">
+        <xpath expr="//ul[@class='list-unstyled']" position="replace">
+            <div class="list-unstyled row" t-if="jobs">
+                <div t-foreach="jobs" t-as="job" t-attf-class="col-md-6 media#{' mt-3' if job_index else ''}">
+                    <div class="media-body" t-att-data-publish="job.website_published and 'on' or 'off'">
+                        <h3>
+                            <a t-attf-href="/jobs/detail/#{ slug(job) }">
+                                <span t-field="job.name"/>
+                            </a>
+                        </h3>
+                        <span t-field="job.address_location"/>
+                        <!--                        <span t-field="job.address_location" t-options='{"widget": "contact"}'/>-->
+                        <span t-if="not job.website_published" class="badge badge-danger">unpublished</span>
+                        <div class="text-muted">
+                            <i class="fa fa-clock-o" title="Publication date" role="img" aria-label="Publication date"/>
+                            <span t-field="job.write_date"/>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+
+    <template id="detail" name="Jobs" inherit_id="website_hr_recruitment.detail">
+        <xpath expr="//div[@class='js_hr_recruitment']" position="replace">
+            <div id="wrap" class="js_hr_recruitment">
+                <div class="oe_structure" id="oe_structure_website_hr_recruitment_detail_1"/>
+
+                <!-- Breadcrumb -->
+                <section class="mb16 bg-white">
+                    <div class="container">
+                        <div class="float-right">
+                            <a role="button" t-attf-href="/jobs/apply/#{job.id}"
+                               class="btn btn-primary btn-lg float-right mt32 mb4">Apply Now!
+                            </a>
+                        </div>
+                        <label class="mb0 mt16">
+                            <a href="/jobs">Jobs</a>
+                        </label>
+                        <h1 class="mb0 mt0" t-field="job.name"/>
+                        <h4 class="mt0" t-field="job.address_location"/>
+                    </div>
+                </section>
+
+                <div t-field="job.website_description"/>
+
+                <div class="oe_structure">
+                    <section class="o_job_bottom_bar mt32 mb32">
+                        <div class="text-center">
+                            <a role="button" t-attf-href="/jobs/apply/#{job.id}" class="btn btn-primary btn-lg">Apply
+                                Now!
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </xpath>
+    </template>
+    <!--    template list job-->
+    <template id="view_all_jobs_inherit" inherit_id="website_hr_recruitment.index">
+        <xpath expr="//div[@class='container oe_website_jobs']" position="replace">
+            <div class="container oe_website_jobs">
+                <div class="row" >
+                    <div class="col-md-12" style="text-align:center;">
+                        <form t-attf-action="/jobs" method="Get" role="search">
+                            <input style="height:50px;" type="text" name="search" placeholder="Tìm việc"/>
+                            <select style="height:50px; width:250px;" type="text" name="industry" >
+                                <t t-if="industries">
+                                    <option value=""> Ngành nghề</option>
+                                    <t t-foreach="industries" t-as="industry">
+                                        <option t-att-value="industry.id">
+                                            <t t-esc="industry.name"/>
+                                        </option>
+                                    </t>
+                                </t>
+                            </select>
+                            <select style="height:50px;" type="text" name="location">
+                                <option value="">Nơi làm việc</option>
+                                <optgroup label="Việt Nam">
+                                    <option value="1">Hồ Chí Minh</option>
+                                    <option value="2">Hà Nội</option>
+                                    <option value="3">Bình Dương</option>
+                                    <option value="4">Cần Thơ</option>
+                                    <option value="5">Đà Nẵng</option>
+                                    <option value="6">Hải Phòng</option>
+                                    <option value="7">Nghệ An</option>
+                                </optgroup>
+                            </select>
+                            <button style="height:50px;" class="searchvt1 op" type="submit">
+<!--                                <i class="fa fa-search"/>-->
+                                    <font style="color: black">Tìm kiếm</font>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+
+
+                <div class="row" t-if="jobs == None">
+                    <h2> Không tìm thấy kết quả phù hợp</h2>
+                </div>
+                <!--result found job-->
+                <t t-if="jobs">
+                <div class="row">
+                    <t t-if="jobs">
+                        <h3> Tìm thấy <span t-esc="len(jobs)"/> công việc</h3>
+                    </t>
+                </div>
+                <div class="row" >
+<!--                    <div class="row">-->
+                    <t t-foreach="jobs" t-as="job">
+                        <div class="col-md-4" style="padding-bottom:15px;">
+                            <div class="box"
+                                 style="width: 360px;height: 240px;border: 1px solid #d3d3d3; background-color: #f8f8f8;padding: 15px;">
+                                <div class="img"
+                                     style="background-color: #fff;width: 130px; height: 70px;padding: 5px;">
+                                    <img src="/sci_hrms/static/description/logo.png"/>
+                                </div>
+                                <div class="title" style="font-weight: bold;font-size: 14px;">
+                                    <a t-attf-href="/jobs/detail/#{ slug(job) }">
+                                        <span t-field="job.name" style="font-size:16px;"/>
+                                    </a>
+                                </div>
+                                <div class="descrip">
+                                    <i class="fa fa-map-marker fa-fw"/> Vị trí: <span t-field="job.address_location"/>
+                                    <br/>
+                                    <span>
+                                        <i class="fa fa-dollar fa-fw"/> Lương:
+                                        <span t-if="job.salary_type in ('usd','vnd')">
+                                            <t t-esc="job.salary_proposed"/>
+                                            <t t-esc="job.salary_type"/>
+                                            -
+                                            <t t-esc="job.salary_proposed_extra"/>
+                                            <t t-esc="job.salary_type"/>
+                                        </span>
+                                        <span t-if="job.salary_type == 'ltt' ">
+                                            <t>Lương thỏa thuận</t>
+                                        </span>
+                                        <span t-if="job.salary_type == 'lct' ">
+                                            <t>Lương cạnh tranh</t>
+                                        </span>
+                                    </span>
+                                    <hr/>
+                                    <span>Hạn nộp hồ sơ: từ
+                                        <span t-field="job.date_open"/>
+                                        đến
+                                        <span t-field="job.date_closed"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+<!--                        </div>-->
+                </div>
+                </t>
+            </div>
+        </xpath>
+    </template>
+
+    <!--detail job-->
+    <template id="view_detail_jobs_inherit" inherit_id="website_hr_recruitment.detail">
+        <xpath expr="//div[@class='js_hr_recruitment']" position="replace">
+            <style>
+                .left-col{
+                border: 1px solid #e3dfdf;
+                width: 100%;
+                padding: 25px 30px;
+                }
+                .right-col{
+                <!--                border: 1px solid;-->
+                width: 100%;
+                padding:10px;
+                }
+                .hr-logo{
+                width: 100px;
+                height: 100px;
+                border: 1px solid ;
+                }
+            </style>
+            <div class="container" style="padding:30px;">
+                <div class="row">
+                    <div class="col-md-8 left-col">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <!--                                    <table border="1" >-->
+                                    <!--                                        <tr>-->
+                                    <!--                                            <td class="logo">-->
+                                    <!--                                                <img src="http://static.talentnetwork.vn/talentnetwork/source/scigroup/images/logo-default.png"/>-->
+                                    <!--                                            </td>-->
+                                    <!--                                        </tr>-->
+                                    <!--                                    </table>-->
+                                    <div class="hr-logo">
+                                        <img src="/sci_hrms/static/description/logo.png"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-10 detail-left" style="padding-left: 30px;">
+                                    <h1 style="font-size: 24px;">
+                                        <span t-field="job.name"/>
+                                    </h1>
+                                    <table class="detail1">
+                                        <tr>
+                                            <th style="width:200px;">Nơi làm việc</th>
+                                            <td><span t-field="job.address_location"/></td>
+                                        </tr>
+<!--                                        <tr>-->
+<!--                                            <th>Cấp bậc</th>-->
+<!--                                            <td>Trưởng nhóm / Giám sát</td>-->
+<!--                                        </tr>-->
+                                        <tr>
+                                            <th>Bằng cấp</th>
+                                            <td> <span t-field="job.type_id"/> </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Kinh nghiệm</th>
+                                            <td>
+                                                <span t-if="job.experience == '0'">
+                                                    <t> Chưa có kinh nghiệm</t>
+                                                </span>
+                                                <span t-if="job.experience == '1'">
+                                                    <t t-esc="job.experience_from"/> - <t t-esc="job.experience_to"/> năm
+                                                </span>
+                                                <span t-if="job.experience == '2'">
+                                                    <t> Không yêu cầu kinh nghiệm</t>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Mức lương</th>
+                                            <td>
+                                                <span t-if="job.salary_type in ('usd','vnd')">
+                                            <t t-esc="job.salary_proposed"/>
+                                            <t t-esc="job.salary_type"/>
+                                            -
+                                            <t t-esc="job.salary_proposed_extra"/>
+                                            <t t-esc="job.salary_type"/>
+                                        </span>
+                                        <span t-if="job.salary_type == 'ltt' ">
+                                            <t>Lương thỏa thuận</t>
+                                        </span>
+                                        <span t-if="job.salary_type == 'lct' ">
+                                            <t>Lương cạnh tranh</t>
+                                        </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nghành nghề</th>
+                                            <td>
+                                                <span t-field="job.job_industry"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Hạn chót nộp hồ sơ</th>
+                                            <td><span t-field="job.date_closed"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <p>
+                                                    <a role="button" t-attf-href="/jobs/apply/#{job.id}"
+                                                       class="btn btn-primary btn-sm" style="width:120px; height:35px;font-size:16px;">Nộp đơn
+                                                    </a>
+                                                    <a href="">Bạn chưa sẵn sàng ứng tuyển?</a>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="row">
+                                <div class="col-md-12 detail2">
+                                    <h2>Phúc lợi</h2>
+                                    <table cellspacing="5">
+                                        <tr>
+                                            <td style="width:250px;">
+                                                <i class="fa fa-medkit"></i>
+                                                Bảo hiểm
+                                            </td>
+                                            <td>
+                                                <i class="fa fa-plane"></i>
+                                                Du Lịch
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-money"></i>
+                                                Phụ cấp
+                                            </td>
+                                            <td>
+                                                <i class="fa fa-graduation-cap"></i>
+                                                Đào tạo
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-line-chart"></i>
+                                                Tăng lương
+                                            </td>
+                                            <td>
+                                                <i class="fa fa-credit-card"></i>
+                                                Công tác phí
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-money"></i>
+                                                Phụ cấp thâm niên
+                                            </td>
+                                            <td>
+                                                <i class="fa fa-briefcase"></i>
+                                                Chế độ nghỉ phép
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa fa-usd"></i>
+                                                Thưởng
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+
+                                    <h2>Mô Tả Công Việc</h2>
+                                    <div class="content1">
+                                        <span t-field="job.description"/>
+                                    </div>
+                                    <h2>Yêu Cầu Công Việc</h2>
+                                    <div class="content_fck">
+                                        <span t-field="job.req_job"/>
+                                    </div>
+                                    <div class="row tagskilldetail">
+                                        <span>Job tags:</span>
+                                        <span t-field="job.categ_ids"/>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 right-col">
+                        <h1 style="font-size:19px">MỌI NGƯỜI CÙNG XEM</h1>
+                        <!--                        <div class="list_job">-->
+                        <!--                            <div class="container">-->
+                        <!--                                <div class="row">-->
+                        <!--                                    <div class="col-xs-12 col-md-12">-->
+                        <!--                                        <div class="col-xs-3 col-md-3">-->
+                        <!--                                            <img src="http://static.talentnetwork.vn/talentnetwork/source/scigroup/images/logo-default.png"/>-->
+                        <!--                                        </div>-->
+                        <!--                                        <div class="col-xs-9 col-md-9">-->
+                        <!--                                            <h3>Kế toán thu ngân</h3>-->
+                        <!--                                            <p>-->
+                        <!--                                                <i class="fa fa-map-marker fa-fw"/>-->
+                        <!--                                                Hà Nội-->
+                        <!--                                            </p>-->
+                        <!--                                            <p>-->
+                        <!--                                                <i class="fa fa-calendar-check-o fa-fw"/>-->
+                        <!--                                                Hạn nộp hồ sơ-->
+                        <!--                                            </p>-->
+                        <!--                                        </div>-->
+                        <!--                                    </div>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!--                    </div>-->
+                        <div class="card mb-3" style="max-width: 290px; height:85px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-3" style="padding-top: 10px;">
+                                    <img src="http://static.talentnetwork.vn/talentnetwork/source/scigroup/images/logo-default.png"
+                                         class="card-img" alt="..."/>
+                                </div>
+                                <div class="col-md-9">
+                                    <!-- <div class="card-body"> -->
+                                    <strong style="padding-left: 10px;">
+                                        <a t-attf-href="/jobs/detail/#{ slug(job) }">Kế toán</a>
+                                    </strong>
+                                    <br/>
+                                    <span>
+                                        <i class="fa fa-map-marker fa-fw"/>
+                                        Hà Nội
+                                    </span>
+                                    <br/>
+                                    <span>
+                                        <i class="fa fa-calendar-check-o fa-fw"/>
+                                        Hạn nộp hồ sơ
+                                    </span>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

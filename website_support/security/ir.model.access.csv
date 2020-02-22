@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_website_support_ticket,access website.support.ticket,model_website_support_ticket,support_staff,1,1,1,0
+access_website_support_ticket_message,access website.support.ticket.message,model_website_support_ticket_message,support_staff,1,0,1,0
+access_mail_followers_support,public access.mail.followers.support,mail.model_mail_followers,base.group_public,0,0,1,0
+access_website_support_ticket_tag,support staff access website.support.ticket.tag,model_website_support_ticket_tag,support_staff,1,0,0,0
+access_website_support_ticket_tag_manager,support manager access website.support.ticket.tag,model_website_support_ticket_tag,support_manager,1,1,1,1
+access_website_support_ticket_close,support staff access website.support.ticket.close,model_website_support_ticket_close,support_staff,1,1,1,1
+access_ir_rule,support manager access ir.rule,base.model_ir_rule,support_manager,1,0,0,0
+access_ir_config_parameter,support manager access ir.config_parameter,base.model_ir_config_parameter,support_manager,1,0,0,0
+access_res_users,support manager access res.users,base.model_res_users,support_manager,1,0,1,0
+access_vnitpro_base_attachment,vnitpro_base_attachment,model_vnitpro_base_attachment,base.group_user,1,1,1,1
