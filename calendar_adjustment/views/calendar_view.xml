@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="calendar_tree_view_inherit" model="ir.ui.view">
+            <field name="name">calendar.tree.view.inherit</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='start']" position="before">
+                    <field name="week_day_tree" string="Thứ"/>
+                </xpath>
+
+                <xpath expr="//field[@name='stop']" position="after">
+                    <field name="name"/>
+                </xpath>
+
+                <xpath expr="//field[@name='partner_ids']" position="replace">
+                    <field name="partner_ids" widget="many2many_tags"/>
+                </xpath>
+
+                <xpath expr="//field[@name='location']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='duration']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
