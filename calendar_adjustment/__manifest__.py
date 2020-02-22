@@ -6,7 +6,7 @@
     'summary': 'Add weekday in tree view',
     'description': "",
     'website': '',
-    'depends': ['calendar'],
+    'depends': ['calendar', 'hr'],
     'data': ['views/calendar_view.xml'],
     'demo': [
     ],

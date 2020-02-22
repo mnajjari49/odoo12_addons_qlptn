@@ -33,5 +33,34 @@
 
             </field>
         </record>
+
+        <record id="calendar_form_view_inherit" model="ir.ui.view">
+            <field name="name">calendar.tree.view.inherit</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='location']" position="replace">
+                    <field name="location" invisible="1"/>
+                    <field name="location_dept" options="{'no_create': True}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="calendar_form_popup_view_inherit" model="ir.ui.view">
+            <field name="name">calendar.tree.view.inherit</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_form_popup"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='location']" position="replace">
+                    <field name="location" invisible="1"/>
+                    <field name="location_dept" options="{'no_create': True}"/>
+                </xpath>
+
+            </field>
+        </record>
+
     </data>
 </odoo>
