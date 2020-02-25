@@ -312,7 +312,7 @@ class SCIMaintenanceRequest(models.Model):
             body += "<p>Dear " + self.user_id.name + ",</p>"
         body += "<p>Bạn vừa nhận được 1 yêu cầu bảo trì/bảo dưỡng.</p>\
                    <p>Chi tiết yêu cầu: <a href='" + base_url + "/web#id=" + str(self.id) + "?model=vnitpro.maintenance.request'>Click vào đây</a></p> <hr/>\
-                   <b>Ticket Number:</b> " + self.code + "<br/>"
+                   <b>Ticket Number:</b> " + str(self.code) + "<br/>"
         if self.maintenance_type == 'corrective':
             body += "<b>Loại bảo trì:</b> Khắc phục sự cố<br/>"
         else:
