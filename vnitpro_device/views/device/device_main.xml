@@ -18,6 +18,7 @@
                     <field name="department_id"/>
                     <field name="parent_id"/>
                     <field name="employee_id"/>
+                    <field name="production_date"/>
                     <field name="first_date_use"/>
                     <field name="period"/>
                     <field name="activate"/>
@@ -107,6 +108,7 @@
                                 <field name="department_id" attrs="{'invisible':[('activate','!=','usage')]}"/>
                                 <field name="parent_id" attrs="{'invisible':[('activate','!=','usage')]}"/>
                                 <field name="employee_id" attrs="{'invisible':[('activate','!=','usage')]}"/>
+                                <field name="production_date"/>
                                 <field name="date_import"/>
                                 <field name="first_date_use"/>
                                 <field name="period"/>
