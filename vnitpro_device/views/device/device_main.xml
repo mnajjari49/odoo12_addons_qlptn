@@ -21,6 +21,7 @@
                     <field name="first_date_use"/>
                     <field name="period"/>
                     <field name="activate"/>
+                    <field name="equipment_lvl"/>
                 </tree>
             </field>
         </record>
@@ -110,6 +111,7 @@
                                 <field name="first_date_use"/>
                                 <field name="period"/>
                                 <field name="serial_no"/>
+                                <field name="equipment_lvl"/>
                             </group>
                             <group name="group_general">
                                 <field name="type" readonly="1"/>

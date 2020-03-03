@@ -29,6 +29,7 @@ class MainDevice(models.Model):
     extra_device_ids = fields.One2many('vnitpro.device.extra', 'main_device_id', 'Thiết bị phụ tùng')
     count_extra_device = fields.Integer('Quantity Of Extra Devices', compute="_compute_quantity_of_extra_device")
     serial_no = fields.Char('Serial Number')
+    equipment_lvl = fields.Selection([(1, 'Cấp độ 1'), (2, 'Cấp độ 2'), (3, 'Cấp độ 3'), (4, 'Cấp độ 4'), (5, 'Cấp độ 5')], 'Cấp độ CL')
 
     # Sửa chữa
     last_repair = fields.Date('Sửa chữa lần cuối', readonly="1")
